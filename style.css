@@ -1,0 +1,167 @@
+/* Remove default margin,  add accessible line-height and improves text rendering */
+* {
+  margin: 0;
+  padding: 0;
+  line-height: calc(1em + 0.5rem);
+}
+body {
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background-repeat: round;
+}
+/* .dark-mode {
+  background-color: black;
+  color: white;
+} */
+
+/* Styling for header */
+header {
+  position: fixed;
+  top: 0; /* So header is on top of page */
+  left: 0;
+  width: 100%;
+  height: 100px;
+  color: rgb(231, 227, 223);
+  text-align: center;
+  margin-bottom: 20px;
+  background-color: #1b764f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* #navbar-menu {
+  display: flex;
+  justify-content: center;
+} */
+ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+a:hover {
+  color: rgb(83, 7, 71);
+  transition: 0.5s;
+}
+
+a {
+  transition: 0.5s;
+  text-decoration: none;
+  color: rgb(231, 227, 223);
+}
+#main {
+  padding-top: 50px;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.navn {
+  margin-top: 75px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(83, 7, 71);
+}
+
+.about-text {
+  padding: 12px;
+  text-align: center;
+  margin: 0 10px 0 10px;
+  color: rgb(83, 7, 71);
+  width: 75%;
+}
+.about-text p {
+  text-shadow: 0px 0px 0px rgb(80, 8, 71);
+}
+.Ommeg-btn {
+  margin-top: 8px;
+  background-color: #6b9080;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 5px 8px;
+  transition: 0.3s;
+}
+.Ommeg-btn:hover {
+  background-color: #213123;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#avatar {
+  padding: 5px;
+  margin: 20px;
+  width: 15em;
+  height: 15em;
+  border-radius: 50%;
+  border: 4px solid rgb(83, 7, 71);
+  background-size: cover;
+}
+#main {
+  background-color: #a4c3b2;
+  padding-bottom: 12px;
+}
+.proh2 {
+  padding-top: 130px;
+  color: rgb(83, 7, 71);
+  text-align: center;
+  padding-bottom: 3rem;
+}
+#projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px;
+}
+.project {
+  border: 2px solid purple;
+  width: 400px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  overflow: hidden; /* added overflow property to contain the absolute positioned info */
+}
+
+.project img {
+  max-width: 100%;
+  height: auto;
+  transition: transform 2s ease-in-out; /* added transition for image scaling on hover */
+}
+
+.project .project-info {
+  color: rgb(83, 7, 71);
+  background-color: #b8d0c6;
+  /* background-color: #6b9080; */
+  position: absolute;
+  top: 0;
+  left: 50;
+  text-align: center;
+  padding: 20px;
+  width: 400px;
+  height: 100px;
+  opacity: 0;
+  transform: translateY(-100%); /* initially move the info off-screen */
+  transition: opacity 0.9s ease-in-out, transform 0.9s ease-in-out;
+}
+
+.project:hover img {
+  transform: scale(1.5); /* increase image size on hover */
+}
+
+.project:hover .project-info {
+  opacity: 0.8;
+  background-color: #b8d0c6;
+  transform: translateX(0); /* move the info back on-screen */
+  /* background-color: #6b9080; */
+}
+.project-info p:hover {
+  cursor: pointer;
+}
