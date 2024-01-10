@@ -1,8 +1,12 @@
 /*Dark/lightmode*/
-// function myFunction() {
-//   var element = document.body;
-//   element.classList.toggle("dark-mode");
-// }
+function Darkmode() {
+  var element = document.body;
+  var btn = document.getElementById("modeSwitcher");
+  element.classList.toggle("dark-mode");
+  if (element.classList.contains("dark-mode"))
+    btn.innerHTML = "Turn off dark mode";
+  else btn.innerHTML = "Turn on dark mode";
+}
 
 /*Smooth scroll*/
 document.addEventListener("DOMContentLoaded", function () {
