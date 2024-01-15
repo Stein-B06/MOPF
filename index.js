@@ -3,9 +3,8 @@ function Darkmode() {
   var element = document.body;
   var btn = document.getElementById("modeSwitcher");
   element.classList.toggle("dark-mode");
-  if (element.classList.contains("dark-mode"))
-    btn.innerHTML = "Turn off dark mode";
-  else btn.innerHTML = "Turn on dark mode";
+  if (element.classList.contains("dark-mode")) btn.innerHTML = "🌙";
+  else btn.innerHTML = "💡";
 }
 
 /*Smooth scroll*/

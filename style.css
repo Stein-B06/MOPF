@@ -5,25 +5,47 @@
   line-height: calc(1em + 0.5rem);
 }
 body {
-  background-color: #e2dddf;
+  background-color: #85ebd9;
   min-height: 100vh;
   font-family: "Poppins", sans-serif;
 }
+/* Styling for header */
+header {
+  position: fixed;
+  top: 0; /* So header is on top of page */
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-color: #3d898d;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.dark-mode header {
+  background-color: #111122;
+}
 
-/*Styling for darkmode*/
 #modeSwitcher {
-  font-family: "Poppins", sans-serif;
-  font-weight: bold;
-  border-radius: 12px;
-  border: 1px solid black;
+  border-radius: 50%;
+  border: 3px solid #e2dddf;
   padding: 4px 6px;
   background-color: #3d898d;
   margin-left: 10px;
+  margin-bottom: 10px;
+}
+.dark-mode #modeSwitcher {
+  background-color: #3d898d;
+  border: 3px solid purple;
 }
 .dark-mode {
   background-color: #2f404d;
-  color: white;
 }
+#lightmode {
+  width: 30px;
+}
+/* Darkmode main section*/
 .dark-mode .navn {
   background-color: #2f404d;
   color: white;
@@ -33,26 +55,6 @@ body {
   background-color: #2f404d;
   color: white;
   transition-duration: 1.5s;
-}
-.dark-mode .about-text {
-  background-color: #2f404d;
-  color: white;
-  transition-duration: 1.5s;
-}
-
-/* Styling for header */
-header {
-  position: fixed;
-  top: 0; /* So header is on top of page */
-  left: 0;
-  width: 100%;
-  height: 100px;
-  text-align: center;
-  background-color: #3d898d;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
 }
 
 /*Styling for the Navbar (Hamburger-menu)*/
@@ -74,10 +76,9 @@ header {
 .nav-list li {
   margin-right: 20px;
 }
-
 .nav-list a {
   text-decoration: none;
-  color: #f2f2f2;
+  color: #111122;
   font-size: 16px;
 }
 
@@ -92,13 +93,16 @@ header {
 .menu-toggle span {
   height: 3px;
   width: 25px;
-  background-color: #f2f2f2;
-  margin: 4px 0;
+  background-color: #e2dddf;
+  margin: 3.5px 0;
   transition: 0.3s;
+}
+.dark-mode .menu-toggle span {
+  background-color: #85ebd9;
 }
 /*Styling for the "X" appearance */
 .menu-toggle span.change:nth-child(1) {
-  transform: rotate(-45deg) translate(-8px, 7.5px);
+  transform: rotate(-45deg) translate(-6.5px, 4.5px);
 }
 
 .menu-toggle span.change:nth-child(2) {
@@ -106,13 +110,21 @@ header {
 }
 
 .menu-toggle span.change:nth-child(3) {
-  transform: rotate(45deg) translate(-8px, -7.5px);
+  transform: rotate(45deg) translate(-9.5px, -7.5px);
 }
 
-/*Responsive design for the nav menu mobile*/
+/*Responsive design for the nav menu smaller screens*/
 @media (max-width: 768px) {
   .menu-toggle {
     display: flex;
+  }
+  #main {
+    padding-bottom: 12px;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .nav-list {
@@ -130,109 +142,193 @@ header {
 
   .nav-list.show {
     display: flex;
+    background-color: #3d898d;
   }
 
   .nav-list li {
     margin: 10px 0;
   }
   .nav-list a {
-    color: #111122;
+    color: #1e2932;
     text-decoration: none;
     font-family: "Poppins", sans-serif;
   }
+  .navn {
+    margin-top: 75px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #111122;
+  }
+
+  .about-text {
+    padding: 12px;
+    text-align: center;
+    margin: 0 10px 0 10px;
+    color: #111122;
+    width: 75%;
+  }
+
+  #avatar {
+    padding: 5px;
+    margin: 20px;
+    width: 15em;
+    height: 15em;
+    border-radius: 50%;
+    border: 4px solid rgb(83, 7, 71);
+    background-size: cover;
+  }
+
+  .proh2 {
+    padding-top: 130px;
+    color: #141414;
+    text-align: center;
+    padding-bottom: 3rem;
+  }
+  #projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px;
+  }
+  #projects p {
+    display: inline-block;
+    padding: 20px 50px;
+  }
+  .project {
+    border: 1px solid #141414;
+    width: 400px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    overflow: hidden; /* added overflow property to contain the absolute positioned info */
+  }
+
+  .project img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 2s ease-in-out; /* added transition for image scaling on hover */
+  }
+
+  .project .project-info {
+    color: #111122;
+    position: absolute;
+    top: 100;
+    left: 50;
+    bottom: 0;
+    text-align: center;
+    padding: 20px;
+    width: 400px;
+    height: 100px;
+    background-color: #b0acb0;
+  }
 }
 
-/* Styling for the dark/light toggle*/
+/*Responsive design for larger screens*/
+@media (min-width: 768px) {
+  header {
+    margin: 0;
+  }
+  #main {
+    display: flex;
+    flex-direction: column;
+  }
+  .navn {
+    margin-top: 150px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: #111122;
+  }
 
-#main {
-  padding-top: 50px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+  .about-text {
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    color: #111122;
+    max-width: 100%;
+  }
+  .about-text p {
+    width: 50%;
+    font-size: larger;
+    margin: 0 0 5vh 0;
+  }
 
-.navn {
-  margin-top: 75px;
-  text-align: center;
-  font-size: 30px;
-  font-weight: bold;
-  color: #111122;
-}
+  #avatar {
+    margin: 0 0 50vh 0;
+    padding: 5px;
+    width: 15em;
+    height: 15em;
+    border-radius: 50%;
+    border: 4px solid rgb(83, 7, 71);
+    background-size: cover;
+  }
 
-.about-text {
-  padding: 12px;
-  text-align: center;
-  margin: 0 10px 0 10px;
-  color: #111122;
-  width: 75%;
-}
+  .proh2 {
+    padding-top: 130px;
+    color: #141414;
+    text-align: center;
+    padding-bottom: 3rem;
+  }
+  #projects {
+    display: flex;
+    align-items: center;
+    margin: 50px;
+  }
+  #projects p {
+    display: inline-block;
+    padding: 20px 50px;
+  }
 
-#avatar {
-  padding: 5px;
-  margin: 20px;
-  width: 15em;
-  height: 15em;
-  border-radius: 50%;
-  border: 4px solid rgb(83, 7, 71);
-  background-size: cover;
-}
-#main {
-  padding-bottom: 12px;
-}
-.proh2 {
-  padding-top: 130px;
-  color: #141414;
-  text-align: center;
-  padding-bottom: 3rem;
-}
-#projects {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 50px;
-}
-.project {
-  border: 1px solid #141414;
-  width: 400px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 20px;
-  overflow: hidden; /* added overflow property to contain the absolute positioned info */
-}
+  .project {
+    border: 1px solid #141414;
+    width: 400px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    overflow: hidden; /* added overflow property to contain the absolute positioned info */
+  }
 
-.project img {
-  max-width: 100%;
-  height: auto;
-  transition: transform 2s ease-in-out; /* added transition for image scaling on hover */
-}
+  .project img {
+    max-width: 100%;
+    transition: transform 2s ease-in-out; /* added transition for image scaling on hover */
+  }
 
-.project .project-info {
-  color: #111122;
-  position: absolute;
-  top: 0;
-  left: 50;
-  text-align: center;
-  padding: 20px;
-  width: 400px;
-  height: 100px;
-  opacity: 0;
-  transform: translateY(-100%); /* initially move the info off-screen */
-  transition: opacity 0.9s ease-in-out, transform 0.9s ease-in-out;
-}
+  .project .project-info {
+    color: #111122;
+    position: absolute;
+    top: 0;
+    left: 50;
+    text-align: center;
+    padding: 20px;
+    width: 400px;
+    height: 100px;
+    opacity: 0;
+    transform: translateY(-100%); /* initially move the info off-screen */
+    transition: opacity 0.9s ease-in-out, transform 0.9s ease-in-out;
+  }
 
-.project:hover img {
-  transform: scale(1.5); /* increase image size on hover */
-}
+  .nav-list a:hover {
+    color: #85ebd9;
+    transition-duration: 0.2s;
+  }
+  .project:hover img {
+    transform: scale(1.5); /* increase image size on hover */
+  }
 
-.project:hover .project-info {
-  opacity: 0.8;
-  background-color: #e2dddf;
-  transform: translateX(0); /* move the info back on-screen */
-  /* background-color: #6b9080; */
-}
-.project-info p:hover {
-  cursor: pointer;
+  .project:hover .project-info {
+    opacity: 0.8;
+    background-color: #e2dddf;
+    transform: translateX(0); /* move the info back on-screen */
+    /* background-color: #6b9080; */
+  }
+  .project-info p:hover {
+    cursor: pointer;
+  }
 }
