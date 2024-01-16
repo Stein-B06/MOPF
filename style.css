@@ -330,6 +330,9 @@ header {
     background-size: 200% 200%;
     animation: gradient 10s linear infinite;
   }
+  .dark-mode #pol {
+    background: var(--gradient-dark);
+  }
   #portrait {
     display: flex;
     justify-content: center;
