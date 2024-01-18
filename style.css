@@ -263,10 +263,12 @@ header {
   }
 
   .proh2 {
-    padding-top: 130px;
-    color: #141414;
+    margin-top: 130px;
     text-align: center;
-    padding-bottom: 3rem;
+    margin-bottom: 3rem;
+    font-size: 30px;
+    font-weight: bold;
+    color: #111122;
   }
   #projects {
     display: flex;
@@ -428,9 +430,12 @@ header {
   }
 
   .proh2 {
-    color: #141414;
+    margin-top: 130px;
     text-align: center;
-    padding-bottom: 3rem;
+    margin-bottom: 3rem;
+    font-size: 40px;
+    font-weight: bold;
+    color: #111122;
   }
 
   .flex-1,
