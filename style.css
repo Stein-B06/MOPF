@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: #85ebd9;
+  background-color: #71d2c0;
   /* background: linear-gradient(
     0deg,
     rgb(179, 153, 231) 1%,
@@ -120,7 +120,7 @@ header {
   transform: rotate(45deg) translate(-9.5px, -7.5px);
 }
 
-/*Colors for the animation dark & light*/
+/*Colors for the dark & light animation*/
 :root {
   --gradient-light: linear-gradient(
     0deg,
@@ -240,7 +240,7 @@ header {
     font-family: "Poppins", sans-serif;
   }
   .navn {
-    margin-top: 75px;
+    margin-top: 15px;
     text-align: center;
     font-size: 30px;
     font-weight: bold;
@@ -280,6 +280,7 @@ header {
   }
   .project {
     border: 1px solid #141414;
+    border-radius: 12px;
     width: 400px;
     position: relative;
     display: flex;
@@ -292,27 +293,38 @@ header {
   .project img {
     max-width: 100%;
     height: auto;
-    transition: transform 2s ease-in-out; /* added transition for image scaling on hover */
   }
 
   .project .project-info {
-    color: #111122;
+    color: #090909;
     position: absolute;
     top: 100;
     left: 50;
     bottom: 0;
     text-align: center;
     padding: 20px;
-    width: 400px;
+    width: 100%;
     height: 100px;
-    background-color: #b0acb0;
+    background-color: #94afb7;
+    opacity: 80%;
   }
 }
 
 /*Responsive design for larger screens*/
+
 @media (min-width: 768px) {
   header {
     margin: 0;
+  }
+  .nav-list a {
+    color: #e2dddf;
+  }
+  .nav-list a:hover {
+    color: #85ebd9;
+    transition-duration: 0.2s;
+  }
+  .live-icon p {
+    background-color: #3d898d;
   }
   #main {
     margin-top: vh;
@@ -402,7 +414,7 @@ header {
 
   .about-text {
     margin-top: 0;
-    margin-bottom: 50vh;
+    margin-bottom: 35vh;
     display: flex;
     justify-content: center;
     padding: 10px;
@@ -416,29 +428,37 @@ header {
   }
 
   .proh2 {
-    padding-top: 130px;
     color: #141414;
     text-align: center;
     padding-bottom: 3rem;
   }
-  #projects {
+
+  .flex-1,
+  .flex-2 {
     display: flex;
-    align-items: center;
-    margin: 50px;
+    justify-content: space-evenly;
+    padding: 10px;
+  }
+
+  #projects {
+    margin-top: 25px;
+    max-width: 100%;
+    padding: 30px;
   }
   #projects p {
     display: inline-block;
-    padding: 20px 50px;
+    margin: 20px 50px;
   }
 
   .project {
     border: 1px solid #141414;
-    width: 400px;
+    max-width: 400px;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
+    transform: translate(50% 50%);
     overflow: hidden; /* added overflow property to contain the absolute positioned info */
   }
 
@@ -455,18 +475,12 @@ header {
     text-align: center;
     padding: 20px;
     width: 400px;
-    height: 100px;
+    height: 100%;
     opacity: 0;
-    transform: translateY(-100%); /* initially move the info off-screen */
+    transform: translateY(100%); /* initially move the info off-screen */
     transition: opacity 0.9s ease-in-out, transform 0.9s ease-in-out;
   }
-  .nav-list a {
-    color: #e2dddf;
-  }
-  .nav-list a:hover {
-    color: #85ebd9;
-    transition-duration: 0.2s;
-  }
+
   .project:hover img {
     transform: scale(1.2); /* increase image size on hover */
   }
