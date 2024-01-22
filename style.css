@@ -346,6 +346,7 @@ header {
   }
   .dark-mode #pol {
     background: var(--gradient-dark);
+    background-size: 200% 200%;
   }
   #portrait {
     display: flex;
@@ -481,12 +482,13 @@ header {
     padding: 20px;
     width: 400px;
     height: 100%;
-    opacity: 0;
-    transform: translateY(100%); /* initially move the info off-screen */
+    opacity: 1;
+    transform: translateY(65%); /* initially move the info off-screen */
     transition: opacity 0.9s ease-in-out, transform 0.9s ease-in-out;
   }
 
   .project:hover img {
+    cursor: pointer;
     transform: scale(1.2); /* increase image size on hover */
   }
 
