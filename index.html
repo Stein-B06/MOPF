@@ -30,9 +30,11 @@
       </header>  
        <!-- About section -->
         <section id="main">
-      <div id="pol"></div>
+      <div id="pol">
+        
+      </div>
                 <div id="portrait"> 
-                  <img id="avatar" src="Randomport.jpg" alt=""></img>
+                  <img id="avatar" src="/images/Randomport.jpg" alt=""></img>
                 </div>
        
             <h2 class="navn">Stein</h2>
@@ -49,29 +51,29 @@
         <h2 class="proh2">Portfolio</h2>
                 <div class="flex-1"> 
                     <div class="project">
-                      <img class="prosjekt-img" src="comingsoon.png" alt="Project">
+                      <img class="prosjekt-img" src="/images/comingsoon.png" alt="Project">
                       <div class="project-info">
                         <h2>Project Title</h2>
                             
                             <p class="github-icon"><a href="#" target="_blank">
-                            <img src="githubicon.svg"  alt="Github-icon" width="40" height="40">
+                            <img src="images/githubicon.svg"  alt="Github-icon" width="40" height="40">
                               </a></p>
                             <p class=><a href="#" target="_blank">
-                            <img src="showlive.svg" alt="Play-button" width="30" height="30">
+                            <img src="/images/showlive.svg" alt="Play-button" width="30" height="30">
                               </a></p>
                         </>
                      </div>
                     </div>
 
                     <div class="project">
-                      <img class="prosjekt-img" src="comingsoon.png" alt="Project">
+                      <img class="prosjekt-img" src="/images/comingsoon.png" alt="Project">
                     <div class="project-info">
                       <h2>Project Title</h2>
                         <p><a href="#" target="_blank">
-                          <img src="githubicon.svg" alt="Github-icon"width="40" height="40">
+                          <img src="images/githubicon.svg"  alt="Github-icon"width="40" height="40">
                           </a></p>
                           <p><a href="#" target="_blank">
-                        <img src="showlive.svg" alt="Play-button" width="30" height="30">
+                        <img src="/images/showlive.svg" alt="Play-button" width="30" height="30">
                         </a></p>
                       </div>
                       
@@ -80,27 +82,27 @@
                 </div>
                 <div class="flex-2">
                     <div class="project">
-                    <img class="prosjekt-img" src="comingsoon.png" alt="Project">
+                    <img class="prosjekt-img" src="/images/comingsoon.png" alt="Project">
                     <div class="project-info">
                       <h2>Project Title</h2>
                         <p><a href="#" target="_blank">
-                          <img src="githubicon.svg" alt="Github-icon" width="40" height="40">
-                          </a></p>
-                          <p><a href="#" target="_blank">
-                        <img src="showlive.svg" alt="Play-button" width="30" height="30">
+                            <img src="images/githubicon.svg"  alt="Github-icon" width="40" height="40">
+                            </a></p>
+                                <p><a href="#" target="_blank">
+                                  <img src="/images/showlive.svg" alt="Play-button" width="30" height="30">
                           </a></p>
                       </div>
                     </div>
                 
                     <div class="project">
-                      <img class="prosjekt-img" src="comingsoon.png" alt="Project">
+                      <img class="prosjekt-img" src="/images/comingsoon.png" alt="Project">
                       <div class="project-info">
                         <h2>Project Title</h2>
                           <p><a href="#">
-                            <img src="githubicon.svg" alt="Github-icon" width="40" height="40">
+                            <img src="images/githubicon.svg"  alt="Github-icon" width="40" height="40">
                             </a></p>
                             <p><a href="#">
-                        <img src="showlive.svg" alt="Play-button" width="30" height="30">
+                        <img src="/images/showlive.svg" alt="Play-button" width="30" height="30">
                           </a></p>
                       </div>
                     </div>
@@ -110,11 +112,55 @@
       <!-- Contact section -->
       
       <section id="kontakt">
-              Kontakt
+        <h2 class="contact-name">Kontakt meg</h2>
+        <div id="contact-container">
+          <form id="form"  action="https://formsubmit.co/epostadr.">
+
+              <!-- <label for="name">Navn:</label> -->
+              <input
+                type="text"
+                  id="form-name"
+                    name="name"
+                      placeholder="Navn"
+                  required
+              />
+
+              <label For="email"></label>
+              <input
+                type="email"
+                  id="form-email"
+                    name="email"
+                       placeholder="Epost addresse"
+                required
+              />
+
+              <label For="message"></label>
+              <textarea
+                id="form-textarea"
+                  id="message"
+                    name="message"
+                      placeholder="Beskjed"
+                        rows="6"
+                required
+                    ></textarea>
+                <input id="form-send" type="submit" value="Send">
+            </form>
+          </div>
+              
+              <!-- <button a href="mailto:epostadr." class="email-link">Send meg en epost</button> -->
       </section>
       
-      <footer>
-        @Copyright 2024
+      <footer id="footer">
+        <div id="footer-icons"> 
+            <p><a href="#" target="_blank">
+                            <img id="git-hub" src="/images/githubfooter.svg" alt="Github-icon" width="40" height="40">
+                            </a></p>
+
+                            <p><a href="#" target="_blank">
+                            <img id="linked-in" src="images/linkedin.svg" alt="Github-icon" width="40" height="40">
+                            </a></p>
+        </div>
+        <div id="copyright">Copyright 2024</div> 
       </footer>
       <script src="index.js"></script>
   </body>

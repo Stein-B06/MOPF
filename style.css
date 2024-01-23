@@ -7,12 +7,6 @@
 
 body {
   background-color: #71d2c0;
-  /* background: linear-gradient(
-    0deg,
-    rgb(179, 153, 231) 1%,
-    rgba(191, 141, 195, 1) 37%,
-    rgba(145, 226, 232, 1) 100%
-  ); */
   min-height: 100vh;
   font-family: "Poppins", sans-serif;
 }
@@ -56,12 +50,49 @@ header {
 .dark-mode .navn {
   background-color: #2f404d;
   color: white;
-  transition-duration: 1s;
 }
 .dark-mode .about-text {
   background-color: #2f404d;
   color: white;
-  transition-duration: 1.5s;
+}
+.dark-mode #pol {
+  background: var(--gradient-dark-pol);
+  background-size: 200% 200%;
+  /* animation: gradient 300s linear infinite; */
+}
+.dark-mode #portrait {
+  background: var(--gradient-dark-portrait);
+  background-size: 200% 200%;
+  animation: gradient 50s linear infinite;
+}
+
+/* Darkmode for The project section */
+.dark-mode .proh2 {
+  color: white;
+}
+
+/* Dark mode for the contact section */
+.dark-mode #kontakt {
+  background: var(--gradient-dark-pol);
+}
+.dark-mode .contact-name {
+  color: white;
+}
+
+/* Darkmode for the footer */
+.dark-mode #footer {
+  background-color: #111122;
+  color: #85ebd9;
+}
+.dark-mode #git-hub {
+  background-color: #85ebd9;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px #e2dddf;
+}
+.dark-mode #linked-in {
+  background-color: #85ebd9;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px #e2dddf;
 }
 
 /*Styling for the Navbar (Hamburger-menu)*/
@@ -85,7 +116,7 @@ header {
 }
 .nav-list a {
   text-decoration: none;
-  color: #111122;
+  /* color: #111122; */
   font-size: 16px;
 }
 
@@ -170,12 +201,6 @@ header {
     /* animation: gradient 30s linear infinite; */
   }
 
-  .dark-mode #pol {
-    background: var(--gradient-dark-pol);
-    background-size: 200% 200%;
-    /* animation: gradient 300s linear infinite; */
-  }
-
   #portrait {
     display: flex;
     justify-content: center;
@@ -185,12 +210,7 @@ header {
     border-radius: 50%;
     background: var(--gradient-light-portrait);
     background-size: 200% 200%;
-    animation: gradient 30s linear infinite;
-  }
-  .dark-mode #portrait {
-    background: var(--gradient-dark-portrait);
-    background-size: 200% 200%;
-    animation: gradient 50s linear infinite;
+    animation: gradient 60s linear infinite;
   }
 
   @keyframes gradient {
@@ -245,6 +265,9 @@ header {
     display: flex;
     background-color: #3d898d;
   }
+  .dark-mode .nav-list.show {
+    background-color: #111122;
+  }
 
   .nav-list li {
     margin: 10px 0;
@@ -253,6 +276,9 @@ header {
     color: #e2dddf;
     text-decoration: none;
     font-family: "Poppins", sans-serif;
+  }
+  .dark-mode .nav-list a {
+    color: #85ebd9;
   }
   .navn {
     margin-top: 15px;
@@ -325,6 +351,59 @@ header {
     background-color: #e2dddf;
     opacity: 80%;
   }
+
+  /* Contact section */
+
+  #kontakt {
+    margin: 135px 50px;
+    background: var(--gradient-light-pol);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-name {
+    padding: 15px;
+  }
+  #contact-container {
+    width: 80%;
+  }
+  #form {
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding: 10px;
+  }
+  #form-send {
+    margin: 10px;
+    padding: 5px 15px;
+    border-radius: 12px;
+  }
+  #footer {
+    height: 100px;
+    width: 100%;
+    background-color: #3d898d;
+  }
+  #footer-icons {
+    gap: 20px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #git-hub {
+    background-color: #85ebd9;
+    border-radius: 50%;
+  }
+  #linked-in {
+    background-color: #85ebd9;
+    border-radius: 50%;
+  }
+  #copyright {
+    text-align: center;
+  }
 }
 
 /*Responsive design for larger screens*/
@@ -359,10 +438,7 @@ header {
     background-size: 200% 200%;
     /* animation: gradient 300s linear infinite; */
   }
-  .dark-mode #pol {
-    background: var(--gradient-dark-pol);
-    background-size: 200% 200%;
-  }
+
   #portrait {
     display: flex;
     justify-content: center;
@@ -374,11 +450,7 @@ header {
     background-size: 200% 200%;
     animation: gradient 60s linear infinite;
   }
-  .dark-mode #portrait {
-    background: var(--gradient-dark-portrait);
-    background-size: 200% 200%;
-    animation: gradient 60s linear infinite;
-  }
+
   @keyframes gradient {
     0% {
       background-position: 200% 500%;
@@ -516,5 +588,75 @@ header {
   }
   .project-info p:hover {
     cursor: pointer;
+  }
+
+  /* Contact section */
+
+  #kontakt {
+    padding: 0;
+    margin: 295px 25%;
+    background: var(--gradient-light-pol);
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+  }
+  .contact-name {
+    margin: 20px 0;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: #111122;
+  }
+  #contact-container {
+    width: 50%;
+  }
+  #form {
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+  }
+  #form-send {
+    margin: 10px;
+    padding: 5px 15px;
+    border-radius: 12px;
+  }
+  .dark-mode #form-send:hover {
+    box-shadow: 0px 0px 10px white;
+  }
+  #form-send:hover {
+    box-shadow: 0px 0px 10px #2f404d;
+  }
+  #footer {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    height: 100px;
+
+    background-color: #3d898d;
+  }
+  #footer-icons {
+    gap: 40px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+  }
+  #git-hub {
+    background-color: #85ebd9;
+    border-radius: 50%;
+  }
+  #linked-in {
+    background-color: #85ebd9;
+    border-radius: 50%;
+  }
+  #linked-in:hover {
+    box-shadow: 0px 0px 20px #e2dddf;
+    transform: scale(1.1);
+  }
+  #git-hub:hover {
+    box-shadow: 0px 0px 20px #e2dddf;
+    transform: scale(1.1);
   }
 }
