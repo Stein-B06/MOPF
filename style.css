@@ -122,17 +122,29 @@ header {
 
 /*Colors for the dark & light animation*/
 :root {
-  --gradient-light: linear-gradient(
+  --gradient-light-portrait: linear-gradient(
     0deg,
-    rgb(150, 119, 213) 1%,
-    rgb(132, 71, 136) 37%,
+    rgb(190, 188, 194) 1%,
+    rgb(58, 10, 61) 37%,
     rgb(153, 218, 223) 100%
   );
-  --gradient-dark: linear-gradient(
+  --gradient-light-pol: linear-gradient(
     180deg,
-    rgb(14, 5, 32) 10%,
-    rgb(90, 47, 93) 37%,
-    rgb(108, 36, 137) 100%
+    rgb(189, 220, 214) 10%,
+    rgb(173, 133, 175) 37%,
+    rgb(153, 218, 223) 100%
+  );
+  --gradient-dark-portrait: linear-gradient(
+    0deg,
+    rgb(37, 19, 75) 10%,
+    rgb(115, 78, 118) 37%,
+    rgb(59, 9, 78) 100%
+  );
+  --gradient-dark-pol: linear-gradient(
+    180deg,
+    rgb(21, 10, 45) 3%,
+    rgb(145, 29, 154) 27%,
+    rgb(46, 6, 57) 90%
   );
 }
 /*Responsive design for the nav menu smaller screens*/
@@ -151,15 +163,17 @@ header {
   #pol {
     margin-top: 100px;
     width: 100%;
-    background: var(--gradient-light);
+    background: var(--gradient-light-pol);
     height: 50px;
     clip-path: polygon(50% 100%, 0 0, 100% 0);
     background-size: 200% 200%;
-    animation: gradient 10s linear infinite;
+    /* animation: gradient 30s linear infinite; */
   }
 
   .dark-mode #pol {
-    background: var(--gradient-dark);
+    background: var(--gradient-dark-pol);
+    background-size: 200% 200%;
+    /* animation: gradient 300s linear infinite; */
   }
 
   #portrait {
@@ -169,48 +183,49 @@ header {
     width: 16em;
     height: 16em;
     border-radius: 50%;
-    background: var(--gradient-light);
+    background: var(--gradient-light-portrait);
     background-size: 200% 200%;
-    animation: gradient 10s linear infinite;
+    animation: gradient 30s linear infinite;
   }
   .dark-mode #portrait {
-    background: var(--gradient-dark);
+    background: var(--gradient-dark-portrait);
     background-size: 200% 200%;
+    animation: gradient 50s linear infinite;
   }
 
   @keyframes gradient {
     0% {
-      background-position: 200% 100%;
+      background-position: 200% 500%;
     }
     10% {
-      background-position: 20% 80%;
+      background-position: 150% 50%;
     }
     20% {
-      background-position: 40% 60%;
+      background-position: 100% 500%;
     }
     30% {
-      background-position: 60% 40%;
+      background-position: 50% 500%;
     }
     40% {
-      background-position: 80% 20%;
+      background-position: 100% 50%;
     }
     50% {
-      background-position: 100% 0%;
+      background-position: 150% 500%;
     }
     60% {
-      background-position: 80% 20%;
+      background-position: 100% 50%;
     }
     70% {
-      background-position: 60% 40%;
+      background-position: 50% 500%;
     }
     80% {
-      background-position: 40% 60%;
+      background-position: 100% 50%;
     }
     90% {
-      background-position: 20% 80%;
+      background-position: 150% 500%;
     }
     100% {
-      background-position: 0% 100%;
+      background-position: 150% 50%;
     }
   }
 
@@ -339,13 +354,14 @@ header {
     margin-top: 100px;
     width: 100%;
     height: 100px;
-    background: var(--gradient-light);
+    background: var(--gradient-light-pol);
     clip-path: polygon(50% 100%, 0 0, 100% 0);
     background-size: 200% 200%;
-    animation: gradient 10s linear infinite;
+    /* animation: gradient 300s linear infinite; */
   }
   .dark-mode #pol {
-    background: var(--gradient-dark);
+    background: var(--gradient-dark-pol);
+    background-size: 200% 200%;
   }
   #portrait {
     display: flex;
@@ -354,50 +370,51 @@ header {
     width: 21em;
     height: 21em;
     border-radius: 50%;
-    background: var(--gradient-light);
+    background: var(--gradient-light-portrait);
     background-size: 200% 200%;
-    animation: gradient 10s linear infinite;
+    animation: gradient 60s linear infinite;
   }
   .dark-mode #portrait {
-    background: var(--gradient-dark);
+    background: var(--gradient-dark-portrait);
     background-size: 200% 200%;
+    animation: gradient 60s linear infinite;
   }
-
   @keyframes gradient {
     0% {
-      background-position: 200% 100%;
+      background-position: 200% 500%;
     }
     10% {
-      background-position: 20% 80%;
+      background-position: 150% 50%;
     }
     20% {
-      background-position: 40% 60%;
+      background-position: 100% 500%;
     }
     30% {
-      background-position: 60% 40%;
+      background-position: 50% 500%;
     }
     40% {
-      background-position: 80% 20%;
+      background-position: 100% 50%;
     }
     50% {
-      background-position: 100% 0%;
+      background-position: 150% 500%;
     }
     60% {
-      background-position: 80% 20%;
+      background-position: 100% 50%;
     }
     70% {
-      background-position: 60% 40%;
+      background-position: 50% 500%;
     }
     80% {
-      background-position: 40% 60%;
+      background-position: 100% 50%;
     }
     90% {
-      background-position: 20% 80%;
+      background-position: 150% 500%;
     }
     100% {
-      background-position: 0% 100%;
+      background-position: 150% 50%;
     }
   }
+
   #avatar {
     width: 20em;
     height: 20em;
@@ -481,12 +498,13 @@ header {
     padding: 20px;
     width: 400px;
     height: 100%;
-    opacity: 0;
-    transform: translateY(100%); /* initially move the info off-screen */
+    opacity: 1;
+    transform: translateY(65%); /* initially move the info off-screen */
     transition: opacity 0.9s ease-in-out, transform 0.9s ease-in-out;
   }
 
   .project:hover img {
+    cursor: pointer;
     transform: scale(1.2); /* increase image size on hover */
   }
 
