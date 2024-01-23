@@ -12,75 +12,99 @@
   <body>
     
     <header>
-      <!-- <button onclick="myFunction()">Toggle dark mode</button> -->
+      <button class="darkmode" onclick="Darkmode()" id="modeSwitcher">💡</button>
           <!-- Navbar meny -->
-          <div id="navbar-menu">
-          <nav>
-          <ul>
+         <nav class="navbar">
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-list"> 
             <li> <a href="#main">Om meg</a></li>
             <li> <a href="#projects">Mine prosjekter</a></li>
             <li> <a href="#kontakt">Kontakt meg</a></li>
-          </ul>
+            </ul>
           </nav>
           </div>
       </header>  
-
-        <!-- About section -->
+       <!-- About section -->
         <section id="main">
-          <h2 class="navn">Stein</h2>
-          <div class="about-container">
-          
-          
+      <div id="pol"></div>
+                <div id="portrait"> 
+                  <img id="avatar" src="Randomport.jpg" alt=""></img>
+                </div>
+       
+            <h2 class="navn">Stein</h2>
             <div class="about-text">   
                 <p>En fremtidig og entusiastisk frontend-utvikler med et ønske om å lage fantastiske nett-opplevelser ved hjelp av mine kunnskaper innenfor HTML, CSS, Javascript og React. Utenom koding kobler jeg av med gaming, brygging av øl og cider, fisking og Tee-off på golfbanen!</p>
-              <!-- <button class= "Ommeg-btn" a href="Om-meg">Les mer</button> -->
-              </div>
-            
-              <div class="port">
-                <img id="avatar" src="Randomport.jpg" alt=""></img>
-              </div>
             </div>
-    
+         
+              </div>
         </section>
 
         <!-- Project section -->
+        
       <section id="projects">
-      <h2 class="proh2">Mine prosjekter</h2>
-        <div class="project">
-      <img src="comingsoon.png" alt="Project">
-      <div class="project-info">
-        <h2>Project Title</h2>
-        <p href="Description of Project 1.">Description of Project 1.</p>
-        <!-- Add more details or links as needed -->
-      </div>
-      </div>
+        <h2 class="proh2">Portfolio</h2>
+                <div class="flex-1"> 
+                    <div class="project">
+                      <img class="prosjekt-img" src="comingsoon.png" alt="Project">
+                      <div class="project-info">
+                        <h2>Project Title</h2>
+                            
+                            <p class="github-icon"><a href="#" target="_blank">
+                            <img src="githubicon.svg"  alt="Github-icon" width="40" height="40">
+                              </a></p>
+                            <p class=><a href="#" target="_blank">
+                            <img src="showlive.svg" alt="Play-button" width="30" height="30">
+                              </a></p>
+                        </>
+                     </div>
+                    </div>
 
-      <div class="project">
-      <img src="comingsoon.png" alt="Project">
-      <div class="project-info">
-        <h2>Project Title</h2>
-        <p href="Description of Project 2.">Description of Project 2.</a></p>
-        <!-- Add more details or links as needed -->
-      </div>
-      </div>
-
-      <div class="project">
-      <img src="comingsoon.png" alt="Project">
-      <div class="project-info">
-        <h2>Project Title</h2>
-        <p href="Description of Project 1.">Description of Project 1.</p>
-        <!-- Add more details or links as needed -->
-      </div>
-      </div>
-
-      <div class="project">
-      <img src="comingsoon.png" alt="Project">
-      <div class="project-info">
-        <h2>Project Title</h2>
-        <p href="Description of Project 1.">Description of Project 1.</p>
-        <!-- Add more details or links as needed -->
-      </div>
-      </div>
+                    <div class="project">
+                      <img class="prosjekt-img" src="comingsoon.png" alt="Project">
+                    <div class="project-info">
+                      <h2>Project Title</h2>
+                        <p><a href="#" target="_blank">
+                          <img src="githubicon.svg" alt="Github-icon"width="40" height="40">
+                          </a></p>
+                          <p><a href="#" target="_blank">
+                        <img src="showlive.svg" alt="Play-button" width="30" height="30">
+                        </a></p>
+                      </div>
+                      
+                    </div>
+                    
+                </div>
+                <div class="flex-2">
+                    <div class="project">
+                    <img class="prosjekt-img" src="comingsoon.png" alt="Project">
+                    <div class="project-info">
+                      <h2>Project Title</h2>
+                        <p><a href="#" target="_blank">
+                          <img src="githubicon.svg" alt="Github-icon" width="40" height="40">
+                          </a></p>
+                          <p><a href="#" target="_blank">
+                        <img src="showlive.svg" alt="Play-button" width="30" height="30">
+                          </a></p>
+                      </div>
+                    </div>
+                
+                    <div class="project">
+                      <img class="prosjekt-img" src="comingsoon.png" alt="Project">
+                      <div class="project-info">
+                        <h2>Project Title</h2>
+                          <p><a href="#">
+                            <img src="githubicon.svg" alt="Github-icon" width="40" height="40">
+                            </a></p>
+                            <p><a href="#">
+                        <img src="showlive.svg" alt="Play-button" width="30" height="30">
+                          </a></p>
+                      </div>
+                    </div>
+                  </div>
       </section>
       <section id="kontakt">
               Kontakt

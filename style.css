@@ -4,16 +4,18 @@
   padding: 0;
   line-height: calc(1em + 0.5rem);
 }
+
 body {
+  background-color: #71d2c0;
+  /* background: linear-gradient(
+    0deg,
+    rgb(179, 153, 231) 1%,
+    rgba(191, 141, 195, 1) 37%,
+    rgba(145, 226, 232, 1) 100%
+  ); */
   min-height: 100vh;
   font-family: "Poppins", sans-serif;
-  background-repeat: round;
 }
-/* .dark-mode {
-  background-color: black;
-  color: white;
-} */
-
 /* Styling for header */
 header {
   position: fixed;
@@ -21,147 +23,480 @@ header {
   left: 0;
   width: 100%;
   height: 100px;
-  color: rgb(231, 227, 223);
+  background-color: #3d898d;
   text-align: center;
-  margin-bottom: 20px;
-  background-color: #1b764f;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 1000;
 }
+.dark-mode header {
+  background-color: #111122;
+}
 
-/* #navbar-menu {
+#modeSwitcher {
+  border-radius: 50%;
+  border: 3px solid #e2dddf;
+  padding: 4px 6px;
+  background-color: #3d898d;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+.dark-mode #modeSwitcher {
+  background-color: #3d898d;
+  border: 3px solid purple;
+}
+.dark-mode {
+  background-color: #2f404d;
+}
+#lightmode {
+  width: 30px;
+}
+/* Darkmode main section*/
+.dark-mode .navn {
+  background-color: #2f404d;
+  color: white;
+  transition-duration: 1s;
+}
+.dark-mode .about-text {
+  background-color: #2f404d;
+  color: white;
+  transition-duration: 1.5s;
+}
+
+/*Styling for the Navbar (Hamburger-menu)*/
+.navbar {
   display: flex;
-  justify-content: center;
-} */
-ul {
+  align-items: center;
+  width: 100%;
+  justify-content: end;
+  margin-right: 20px;
+}
+
+.nav-list {
   list-style: none;
   display: flex;
-  gap: 20px;
-}
-a:hover {
-  color: rgb(83, 7, 71);
-  transition: 0.5s;
+  margin: 0;
+  padding: 0;
 }
 
-a {
-  transition: 0.5s;
+.nav-list li {
+  margin-right: 20px;
+}
+.nav-list a {
   text-decoration: none;
-  color: rgb(231, 227, 223);
-}
-#main {
-  padding-top: 50px;
+  color: #111122;
+  font-size: 16px;
 }
 
-.about-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-}
-.navn {
-  margin-top: 75px;
-  text-align: center;
-  font-size: 30px;
-  font-weight: bold;
-  color: rgb(83, 7, 71);
-}
-
-.about-text {
-  padding: 12px;
-  text-align: center;
-  margin: 0 10px 0 10px;
-  color: rgb(83, 7, 71);
-  width: 75%;
-}
-.about-text p {
-  text-shadow: 0px 0px 0px rgb(80, 8, 71);
-}
-.Ommeg-btn {
-  margin-top: 8px;
-  background-color: #6b9080;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  padding: 5px 8px;
-  transition: 0.3s;
-}
-.Ommeg-btn:hover {
-  background-color: #213123;
+.menu-toggle {
   cursor: pointer;
+  display: none;
+  flex-direction: column;
+  z-index: 1000;
+  margin-bottom: 10px;
+}
+
+.menu-toggle span {
+  height: 3px;
+  width: 25px;
+  background-color: #e2dddf;
+  margin: 3.5px 0;
   transition: 0.3s;
 }
-
-#avatar {
-  padding: 5px;
-  margin: 20px;
-  width: 15em;
-  height: 15em;
-  border-radius: 50%;
-  border: 4px solid rgb(83, 7, 71);
-  background-size: cover;
+.dark-mode .menu-toggle span {
+  background-color: #85ebd9;
 }
-#main {
-  background-color: #a4c3b2;
-  padding-bottom: 12px;
-}
-.proh2 {
-  padding-top: 130px;
-  color: rgb(83, 7, 71);
-  text-align: center;
-  padding-bottom: 3rem;
-}
-#projects {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 50px;
-}
-.project {
-  border: 2px solid purple;
-  width: 400px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 20px;
-  overflow: hidden; /* added overflow property to contain the absolute positioned info */
+/*Styling for the "X" appearance */
+.menu-toggle span.change:nth-child(1) {
+  transform: rotate(-45deg) translate(-6.5px, 4.5px);
 }
 
-.project img {
-  max-width: 100%;
-  height: auto;
-  transition: transform 2s ease-in-out; /* added transition for image scaling on hover */
-}
-
-.project .project-info {
-  color: rgb(83, 7, 71);
-  background-color: #b8d0c6;
-  /* background-color: #6b9080; */
-  position: absolute;
-  top: 0;
-  left: 50;
-  text-align: center;
-  padding: 20px;
-  width: 400px;
-  height: 100px;
+.menu-toggle span.change:nth-child(2) {
   opacity: 0;
-  transform: translateY(-100%); /* initially move the info off-screen */
-  transition: opacity 0.9s ease-in-out, transform 0.9s ease-in-out;
 }
 
-.project:hover img {
-  transform: scale(1.5); /* increase image size on hover */
+.menu-toggle span.change:nth-child(3) {
+  transform: rotate(45deg) translate(-9.5px, -7.5px);
 }
 
-.project:hover .project-info {
-  opacity: 0.8;
-  background-color: #b8d0c6;
-  transform: translateX(0); /* move the info back on-screen */
-  /* background-color: #6b9080; */
+/*Colors for the dark & light animation*/
+:root {
+  --gradient-light: linear-gradient(
+    0deg,
+    rgb(150, 119, 213) 1%,
+    rgb(132, 71, 136) 37%,
+    rgb(153, 218, 223) 100%
+  );
+  --gradient-dark: linear-gradient(
+    180deg,
+    rgb(14, 5, 32) 10%,
+    rgb(90, 47, 93) 37%,
+    rgb(108, 36, 137) 100%
+  );
 }
-.project-info p:hover {
-  cursor: pointer;
+/*Responsive design for the nav menu smaller screens*/
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+  #main {
+    padding-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #pol {
+    margin-top: 100px;
+    width: 100%;
+    background: var(--gradient-light);
+    height: 50px;
+    clip-path: polygon(50% 100%, 0 0, 100% 0);
+    background-size: 200% 200%;
+    animation: gradient 10s linear infinite;
+  }
+
+  .dark-mode #pol {
+    background: var(--gradient-dark);
+  }
+
+  #portrait {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 16em;
+    height: 16em;
+    border-radius: 50%;
+    background: var(--gradient-light);
+    background-size: 200% 200%;
+    animation: gradient 10s linear infinite;
+  }
+  .dark-mode #portrait {
+    background: var(--gradient-dark);
+    background-size: 200% 200%;
+  }
+
+  @keyframes gradient {
+    0% {
+      background-position: 200% 100%;
+    }
+    10% {
+      background-position: 20% 80%;
+    }
+    20% {
+      background-position: 40% 60%;
+    }
+    30% {
+      background-position: 60% 40%;
+    }
+    40% {
+      background-position: 80% 20%;
+    }
+    50% {
+      background-position: 100% 0%;
+    }
+    60% {
+      background-position: 80% 20%;
+    }
+    70% {
+      background-position: 60% 40%;
+    }
+    80% {
+      background-position: 40% 60%;
+    }
+    90% {
+      background-position: 20% 80%;
+    }
+    100% {
+      background-position: 0% 100%;
+    }
+  }
+
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: 10px;
+  }
+
+  .nav-list.show {
+    display: flex;
+    background-color: #3d898d;
+  }
+
+  .nav-list li {
+    margin: 10px 0;
+  }
+  .nav-list a {
+    color: #e2dddf;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+  }
+  .navn {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #111122;
+  }
+
+  .about-text {
+    padding: 12px;
+    text-align: center;
+    margin: 0 10px 0 10px;
+    color: #111122;
+    width: 75%;
+  }
+
+  #avatar {
+    width: 15em;
+    height: 15em;
+    border-radius: 50%;
+    background-size: cover;
+  }
+
+  .proh2 {
+    margin-top: 130px;
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 30px;
+    font-weight: bold;
+    color: #111122;
+  }
+  #projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px;
+  }
+  #projects p {
+    display: inline-block;
+    padding: 20px 50px;
+  }
+  .project {
+    border: 1px solid #141414;
+    border-radius: 12px;
+    width: 400px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    overflow: hidden; /* added overflow property to contain the absolute positioned info */
+  }
+
+  .project img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .project .project-info {
+    color: #090909;
+    position: absolute;
+    top: 100;
+    left: 50;
+    bottom: 0;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    height: 100px;
+    background-color: #e2dddf;
+    opacity: 80%;
+  }
+}
+
+/*Responsive design for larger screens*/
+
+@media (min-width: 768px) {
+  header {
+    margin: 0;
+  }
+  .nav-list a {
+    color: #e2dddf;
+  }
+  .nav-list a:hover {
+    color: #85ebd9;
+    transition-duration: 0.2s;
+  }
+  .live-icon p {
+    background-color: #3d898d;
+  }
+  #main {
+    margin-top: vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #pol {
+    margin-top: 100px;
+    width: 100%;
+    height: 100px;
+    background: var(--gradient-light);
+    clip-path: polygon(50% 100%, 0 0, 100% 0);
+    background-size: 200% 200%;
+    animation: gradient 10s linear infinite;
+  }
+  .dark-mode #pol {
+    background: var(--gradient-dark);
+  }
+  #portrait {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 21em;
+    height: 21em;
+    border-radius: 50%;
+    background: var(--gradient-light);
+    background-size: 200% 200%;
+    animation: gradient 10s linear infinite;
+  }
+  .dark-mode #portrait {
+    background: var(--gradient-dark);
+    background-size: 200% 200%;
+  }
+
+  @keyframes gradient {
+    0% {
+      background-position: 200% 100%;
+    }
+    10% {
+      background-position: 20% 80%;
+    }
+    20% {
+      background-position: 40% 60%;
+    }
+    30% {
+      background-position: 60% 40%;
+    }
+    40% {
+      background-position: 80% 20%;
+    }
+    50% {
+      background-position: 100% 0%;
+    }
+    60% {
+      background-position: 80% 20%;
+    }
+    70% {
+      background-position: 60% 40%;
+    }
+    80% {
+      background-position: 40% 60%;
+    }
+    90% {
+      background-position: 20% 80%;
+    }
+    100% {
+      background-position: 0% 100%;
+    }
+  }
+  #avatar {
+    width: 20em;
+    height: 20em;
+    border-radius: 50%;
+    background-size: cover;
+  }
+
+  .navn {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: #111122;
+  }
+
+  .about-text {
+    margin-top: 0;
+    margin-bottom: 35vh;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    color: #111122;
+    max-width: 100%;
+  }
+  .about-text p {
+    width: 50%;
+    font-size: larger;
+    margin: 0 0 5vh 0;
+  }
+
+  .proh2 {
+    margin-top: 130px;
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 40px;
+    font-weight: bold;
+    color: #111122;
+  }
+
+  .flex-1,
+  .flex-2 {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+  }
+
+  #projects {
+    margin-top: 25px;
+    max-width: 100%;
+    padding: 30px;
+  }
+  #projects p {
+    display: inline-block;
+    margin: 20px 50px;
+  }
+
+  .project {
+    border: 1px solid #141414;
+    max-width: 400px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+    transform: translate(50% 50%);
+    overflow: hidden; /* added overflow property to contain the absolute positioned info */
+  }
+
+  .project img {
+    max-width: 100%;
+    transition: transform 2s ease-in-out; /* added transition for image scaling on hover */
+  }
+
+  .project .project-info {
+    color: #111122;
+    position: absolute;
+    top: 0;
+    left: 50;
+    text-align: center;
+    padding: 20px;
+    width: 400px;
+    height: 100%;
+    opacity: 0;
+    transform: translateY(100%); /* initially move the info off-screen */
+    transition: opacity 0.9s ease-in-out, transform 0.9s ease-in-out;
+  }
+
+  .project:hover img {
+    transform: scale(1.2); /* increase image size on hover */
+  }
+
+  .project:hover .project-info {
+    opacity: 0.8;
+    background-color: #e2dddf;
+    transform: translateX(0); /* move the info back on-screen */
+    /* background-color: #6b9080; */
+  }
+  .project-info p:hover {
+    cursor: pointer;
+  }
 }
