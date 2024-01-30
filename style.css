@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: #71d2c0;
+  background-color: #add0ca;
   min-height: 100vh;
   font-family: "Poppins", sans-serif;
 }
@@ -362,12 +362,7 @@ header {
 
   #kontakt {
     margin: 135px 50px;
-    background: linear-gradient(
-      0deg,
-      rgb(145, 158, 156) 1%,
-      rgb(129, 87, 132) 37%,
-      #4f9397 90%
-    );
+    background-color: #71d2c0;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -576,7 +571,7 @@ header {
 
   .project img {
     max-width: 100%;
-    transition: transform 2s ease-in-out; /* added transition for image scaling on hover */
+    transition: transform 1s ease-in-out; /* added transition for image scaling on hover */
   }
 
   .project .project-info {
@@ -590,12 +585,12 @@ header {
     height: 100%;
     opacity: 1;
     transform: translateY(65%); /* initially move the info off-screen */
-    transition: opacity 0.9s ease-in-out, transform 0.9s ease-in-out;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
   }
 
   .project:hover img {
     cursor: pointer;
-    transform: scale(1.2); /* increase image size on hover */
+    transform: scale(1.1); /* increase image size on hover */
   }
 
   .project:hover .project-info {
@@ -613,12 +608,7 @@ header {
   #kontakt {
     padding: 0;
     margin: 295px 25%;
-    background: linear-gradient(
-      0deg,
-      rgb(145, 158, 156) 1%,
-      rgb(129, 87, 132) 37%,
-      #4f9397 90%
-    );
+    background-color: #71d2c0;
     display: flex;
     flex-direction: column;
     box-shadow: 2px 3px 14px 7px rgb(102, 91, 120);
