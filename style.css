@@ -10,6 +10,7 @@ body {
   min-height: 100vh;
   font-family: "Poppins", sans-serif;
 }
+
 /* Styling for header */
 header {
   position: fixed;
@@ -194,7 +195,12 @@ header {
   #pol {
     margin-top: 100px;
     width: 100%;
-    background: var(--gradient-light-pol);
+    background: linear-gradient(
+      0deg,
+      rgb(145, 158, 156) 1%,
+      rgb(129, 87, 132) 37%,
+      #4f9397 90%
+    );
     height: 50px;
     clip-path: polygon(50% 100%, 0 0, 100% 0);
     background-size: 200% 200%;
@@ -356,7 +362,12 @@ header {
 
   #kontakt {
     margin: 135px 50px;
-    background: var(--gradient-light-pol);
+    background: linear-gradient(
+      0deg,
+      rgb(145, 158, 156) 1%,
+      rgb(129, 87, 132) 37%,
+      #4f9397 90%
+    );
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -433,7 +444,12 @@ header {
     margin-top: 100px;
     width: 100%;
     height: 100px;
-    background: var(--gradient-light-pol);
+    background: linear-gradient(
+      0deg,
+      rgb(145, 158, 156) 1%,
+      rgb(129, 87, 132) 37%,
+      #4f9397 90%
+    );
     clip-path: polygon(50% 100%, 0 0, 100% 0);
     background-size: 200% 200%;
     /* animation: gradient 300s linear infinite; */
@@ -498,9 +514,10 @@ header {
     margin-top: 10px;
     margin-bottom: 20px;
     text-align: center;
-    font-size: 40px;
+    font-size: 50px;
     font-weight: bold;
-    color: #111122;
+    color: #e2e2e8;
+    text-shadow: 0 0 10px rgb(48, 157, 204);
   }
 
   .about-text {
@@ -545,6 +562,7 @@ header {
   }
 
   .project {
+    box-shadow: 2px 3px 14px 7px rgb(102, 91, 120);
     border: 1px solid #141414;
     max-width: 400px;
     position: relative;
@@ -595,10 +613,15 @@ header {
   #kontakt {
     padding: 0;
     margin: 295px 25%;
-    background: var(--gradient-light-pol);
+    background: linear-gradient(
+      0deg,
+      rgb(145, 158, 156) 1%,
+      rgb(129, 87, 132) 37%,
+      #4f9397 90%
+    );
     display: flex;
     flex-direction: column;
-
+    box-shadow: 2px 3px 14px 7px rgb(102, 91, 120);
     align-items: center;
   }
   .contact-name {
@@ -627,6 +650,7 @@ header {
   }
   #form-send:hover {
     box-shadow: 0px 0px 10px #2f404d;
+    cursor: pointer;
   }
   #footer {
     display: flex;
