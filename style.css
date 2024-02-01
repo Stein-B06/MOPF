@@ -50,7 +50,9 @@ header {
 /* Darkmode main section*/
 .dark-mode .navn {
   background-color: #2f404d;
-  color: white;
+  font-weight: bold;
+  color: #e2e2e8;
+  text-shadow: 0 0 10px rgb(48, 157, 204);
 }
 .dark-mode .about-text {
   background-color: #2f404d;
@@ -179,7 +181,27 @@ header {
     rgb(46, 6, 57) 90%
   );
 }
-/*Responsive design for the nav menu smaller screens*/
+
+/* Styling for the sidebar */
+.sidebar {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translatey(-50%);
+  background: transparent;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social-icon {
+  display: block;
+  text-decoration: none;
+}
+
+/*Responsive design for smaller screens*/
+
 @media (max-width: 768px) {
   .menu-toggle {
     display: flex;
@@ -289,12 +311,18 @@ header {
   .navn {
     margin-top: 15px;
     text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: #111122;
+  }
+  .tittel {
+    margin-top: 15px;
+    text-align: center;
     font-size: 30px;
     font-weight: bold;
     color: #111122;
   }
-
-  .about-text {
+  .short-aboutme {
     padding: 12px;
     text-align: center;
     margin: 0 10px 0 10px;
@@ -330,8 +358,10 @@ header {
   .project {
     border: 1px solid #141414;
     border-radius: 12px;
-    width: 400px;
-    position: relative;
+    width: 350px;
+    height: 400px;
+    flex-direction: column;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -345,17 +375,11 @@ header {
   }
 
   .project .project-info {
-    color: #090909;
-    position: absolute;
-    top: 100;
-    left: 50;
-    bottom: 0;
     text-align: center;
-    padding: 20px;
+    padding: 10px;
     width: 100%;
-    height: 100px;
+
     background-color: #e2dddf;
-    opacity: 80%;
   }
 
   /* Contact section */
@@ -411,7 +435,6 @@ header {
     text-align: center;
   }
 }
-
 /*Responsive design for larger screens*/
 
 @media (min-width: 768px) {
@@ -511,8 +534,7 @@ header {
     text-align: center;
     font-size: 50px;
     font-weight: bold;
-    color: #e2e2e8;
-    text-shadow: 0 0 10px rgb(48, 157, 204);
+    color: #111122;
   }
 
   .about-text {
@@ -573,7 +595,9 @@ header {
     max-width: 100%;
     transition: transform 1s ease-in-out; /* added transition for image scaling on hover */
   }
-
+  .sec-icons {
+    display: block;
+  }
   .project .project-info {
     color: #111122;
     position: absolute;
