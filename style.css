@@ -17,7 +17,7 @@ header {
   top: 0; /* So header is on top of page */
   left: 0;
   width: 100%;
-  height: 100px;
+  height: 60px;
   background-color: #3d898d;
   text-align: center;
   display: flex;
@@ -48,16 +48,7 @@ header {
   width: 30px;
 }
 /* Darkmode main section*/
-.dark-mode .navn {
-  background-color: #2f404d;
-  font-weight: bold;
-  color: #e2e2e8;
-  text-shadow: 0 0 10px rgb(48, 157, 204);
-}
-.dark-mode .about-text {
-  background-color: #2f404d;
-  color: white;
-}
+
 .dark-mode #pol {
   background: var(--gradient-dark-pol);
   background-size: 200% 200%;
@@ -71,7 +62,9 @@ header {
 
 /* Darkmode for The project section */
 .dark-mode .proh2 {
-  color: white;
+  font-weight: bold;
+  color: #e2e2e8;
+  text-shadow: 0 0 10px rgb(48, 157, 204);
 }
 
 /* Dark mode for the contact section */
@@ -203,6 +196,9 @@ header {
 /*Responsive design for smaller screens*/
 
 @media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
   .menu-toggle {
     display: flex;
   }
@@ -215,7 +211,7 @@ header {
   }
 
   #pol {
-    margin-top: 100px;
+    margin-top: 60px;
     width: 100%;
     background: linear-gradient(
       0deg,
@@ -316,10 +312,8 @@ header {
     color: #111122;
   }
   .tittel {
-    margin-top: 15px;
     text-align: center;
-    font-size: 30px;
-    font-weight: bold;
+    font-size: 25px;
     color: #111122;
   }
   .short-aboutme {
@@ -459,7 +453,7 @@ header {
     align-items: center;
   }
   #pol {
-    margin-top: 100px;
+    margin-top: 60px;
     width: 100%;
     height: 100px;
     background: linear-gradient(
@@ -527,36 +521,100 @@ header {
     border-radius: 50%;
     background-size: cover;
   }
-
+  #Om-meg {
+    margin-top: 300px;
+  }
+  #main-card {
+    border-radius: 15px;
+    margin-top: 10px;
+    text-align: center;
+    max-width: 550px;
+    box-shadow: 0px 0px 10px 5px rgb(102, 91, 120);
+  }
+  .dark-mode #main-card {
+    color: #e8e2e7;
+    text-shadow: 0 0 10px rgb(135, 18, 126);
+    box-shadow: 2px 1px 25px 5px rgb(173, 52, 180);
+    background-color: #111122;
+  }
   .navn {
     margin-top: 10px;
-    margin-bottom: 20px;
+    font-size: 30px;
+  }
+  .tittel {
+    font-size: 20px;
+  }
+
+  .short-aboutme {
+    padding: 15px 45px;
+  }
+
+  /* About me section */
+  .main2-title {
     text-align: center;
-    font-size: 50px;
-    font-weight: bold;
-    color: #111122;
+    margin-top: 5.5em;
+  }
+  .dark-mode .main2-title {
+    color: #e8e2e7;
+    text-shadow: 0 0 10px rgb(135, 18, 126);
+    animation: neonlight 4s;
+  }
+  @keyframes neonlight {
+    0% {
+      color: #2f404d;
+      text-shadow: 0 0 10px rgb(135, 18, 126);
+    }
+    2% {
+      color: #e8e2e7;
+      text-shadow: 0 0 10px rgb(135, 18, 126);
+    }
+    3% {
+      color: #2f404d;
+      text-shadow: 0 0 10px rgb(135, 18, 126);
+    }
+    4% {
+      color: #e8e2e7;
+      text-shadow: 0 0 10px rgb(135, 18, 126);
+    }
+    6% {
+      color: #2f404d;
+      text-shadow: 0 0 10px rgb(135, 18, 126);
+    }
+    100% {
+      color: #e8e2e7;
+      text-shadow: 0 0 10px rgb(135, 18, 126);
+    }
   }
 
-  .about-text {
-    margin-top: 0;
-    margin-bottom: 35vh;
+  #main2 {
+    border-radius: 15px;
+    margin: 6.5em 4em 3em 4em;
+    border: 5px solid rgb(102, 91, 120);
+  }
+  .about-p {
+    min-width: 50%;
+    max-width: 60%;
+    padding: 50px 50px 50px 50px;
+  }
+
+  #portrait-2 {
+    /* height: 16em; */
+    width: auto;
     display: flex;
-    justify-content: center;
-    padding: 10px;
-    color: #111122;
-    max-width: 100%;
+    justify-content: end;
+    margin: 10px;
   }
-  .about-text p {
-    width: 50%;
-    font-size: larger;
-    margin: 0 0 5vh 0;
+  #avatar-2 {
+    height: 350px;
+    width: 550px;
   }
 
+  /* Project section */
   .proh2 {
-    margin-top: 130px;
+    margin-top: 150px;
     text-align: center;
     margin-bottom: 3rem;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: bold;
     color: #111122;
   }
@@ -631,7 +689,7 @@ header {
 
   #kontakt {
     padding: 0;
-    margin: 295px 25%;
+    margin: 280px 25%;
     background-color: #71d2c0;
     display: flex;
     flex-direction: column;
@@ -641,7 +699,7 @@ header {
   .contact-name {
     margin: 20px 0;
     text-align: center;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: bold;
     color: #111122;
   }
