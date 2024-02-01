@@ -6,17 +6,18 @@
 }
 
 body {
-  background-color: #71d2c0;
+  background-color: #add0ca;
   min-height: 100vh;
   font-family: "Poppins", sans-serif;
 }
+
 /* Styling for header */
 header {
   position: fixed;
   top: 0; /* So header is on top of page */
   left: 0;
   width: 100%;
-  height: 100px;
+  height: 60px;
   background-color: #3d898d;
   text-align: center;
   display: flex;
@@ -47,14 +48,7 @@ header {
   width: 30px;
 }
 /* Darkmode main section*/
-.dark-mode .navn {
-  background-color: #2f404d;
-  color: white;
-}
-.dark-mode .about-text {
-  background-color: #2f404d;
-  color: white;
-}
+
 .dark-mode #pol {
   background: var(--gradient-dark-pol);
   background-size: 200% 200%;
@@ -68,7 +62,9 @@ header {
 
 /* Darkmode for The project section */
 .dark-mode .proh2 {
-  color: white;
+  font-weight: bold;
+  color: #e2e2e8;
+  text-shadow: 0 0 10px rgb(48, 157, 204);
 }
 
 /* Dark mode for the contact section */
@@ -178,8 +174,31 @@ header {
     rgb(46, 6, 57) 90%
   );
 }
-/*Responsive design for the nav menu smaller screens*/
+
+/* Styling for the sidebar */
+.sidebar {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translatey(-50%);
+  background: transparent;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social-icon {
+  display: block;
+  text-decoration: none;
+}
+
+/*Responsive design for smaller screens*/
+
 @media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
   .menu-toggle {
     display: flex;
   }
@@ -192,9 +211,14 @@ header {
   }
 
   #pol {
-    margin-top: 100px;
+    margin-top: 60px;
     width: 100%;
-    background: var(--gradient-light-pol);
+    background: linear-gradient(
+      0deg,
+      rgb(145, 158, 156) 1%,
+      rgb(129, 87, 132) 37%,
+      #4f9397 90%
+    );
     height: 50px;
     clip-path: polygon(50% 100%, 0 0, 100% 0);
     background-size: 200% 200%;
@@ -283,12 +307,16 @@ header {
   .navn {
     margin-top: 15px;
     text-align: center;
-    font-size: 30px;
+    font-size: 40px;
     font-weight: bold;
     color: #111122;
   }
-
-  .about-text {
+  .tittel {
+    text-align: center;
+    font-size: 25px;
+    color: #111122;
+  }
+  .short-aboutme {
     padding: 12px;
     text-align: center;
     margin: 0 10px 0 10px;
@@ -324,8 +352,10 @@ header {
   .project {
     border: 1px solid #141414;
     border-radius: 12px;
-    width: 400px;
-    position: relative;
+    width: 350px;
+    height: 400px;
+    flex-direction: column;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -339,24 +369,18 @@ header {
   }
 
   .project .project-info {
-    color: #090909;
-    position: absolute;
-    top: 100;
-    left: 50;
-    bottom: 0;
     text-align: center;
-    padding: 20px;
+    padding: 10px;
     width: 100%;
-    height: 100px;
+
     background-color: #e2dddf;
-    opacity: 80%;
   }
 
   /* Contact section */
 
   #kontakt {
     margin: 135px 50px;
-    background: var(--gradient-light-pol);
+    background-color: #71d2c0;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -405,7 +429,6 @@ header {
     text-align: center;
   }
 }
-
 /*Responsive design for larger screens*/
 
 @media (min-width: 768px) {
@@ -430,10 +453,15 @@ header {
     align-items: center;
   }
   #pol {
-    margin-top: 100px;
+    margin-top: 60px;
     width: 100%;
     height: 100px;
-    background: var(--gradient-light-pol);
+    background: linear-gradient(
+      0deg,
+      rgb(145, 158, 156) 1%,
+      rgb(129, 87, 132) 37%,
+      #4f9397 90%
+    );
     clip-path: polygon(50% 100%, 0 0, 100% 0);
     background-size: 200% 200%;
     /* animation: gradient 300s linear infinite; */
@@ -493,36 +521,100 @@ header {
     border-radius: 50%;
     background-size: cover;
   }
-
+  #Om-meg {
+    margin-top: 300px;
+  }
+  #main-card {
+    border-radius: 15px;
+    margin-top: 10px;
+    text-align: center;
+    max-width: 550px;
+    box-shadow: 0px 0px 10px 5px rgb(102, 91, 120);
+  }
+  .dark-mode #main-card {
+    color: #e8e2e7;
+    text-shadow: 0 0 10px rgb(135, 18, 126);
+    box-shadow: 2px 1px 25px 5px rgb(173, 52, 180);
+    background-color: #111122;
+  }
   .navn {
     margin-top: 10px;
-    margin-bottom: 20px;
+    font-size: 30px;
+  }
+  .tittel {
+    font-size: 20px;
+  }
+
+  .short-aboutme {
+    padding: 15px 45px;
+  }
+
+  /* About me section */
+  .main2-title {
     text-align: center;
-    font-size: 40px;
-    font-weight: bold;
-    color: #111122;
+    margin-top: 5.5em;
+  }
+  .dark-mode .main2-title {
+    color: #e8e2e7;
+    text-shadow: 0 0 10px rgb(135, 18, 126);
+    animation: neonlight 4s;
+  }
+  @keyframes neonlight {
+    0% {
+      color: #2f404d;
+      text-shadow: 0 0 10px rgb(135, 18, 126);
+    }
+    2% {
+      color: #e8e2e7;
+      text-shadow: 0 0 10px rgb(135, 18, 126);
+    }
+    3% {
+      color: #2f404d;
+      text-shadow: 0 0 10px rgb(135, 18, 126);
+    }
+    4% {
+      color: #e8e2e7;
+      text-shadow: 0 0 10px rgb(135, 18, 126);
+    }
+    6% {
+      color: #2f404d;
+      text-shadow: 0 0 10px rgb(135, 18, 126);
+    }
+    100% {
+      color: #e8e2e7;
+      text-shadow: 0 0 10px rgb(135, 18, 126);
+    }
   }
 
-  .about-text {
-    margin-top: 0;
-    margin-bottom: 35vh;
+  #main2 {
+    border-radius: 15px;
+    margin: 6.5em 4em 3em 4em;
+    border: 5px solid rgb(102, 91, 120);
+  }
+  .about-p {
+    min-width: 50%;
+    max-width: 60%;
+    padding: 50px 50px 50px 50px;
+  }
+
+  #portrait-2 {
+    /* height: 16em; */
+    width: auto;
     display: flex;
-    justify-content: center;
-    padding: 10px;
-    color: #111122;
-    max-width: 100%;
+    justify-content: end;
+    margin: 10px;
   }
-  .about-text p {
-    width: 50%;
-    font-size: larger;
-    margin: 0 0 5vh 0;
+  #avatar-2 {
+    height: 350px;
+    width: 550px;
   }
 
+  /* Project section */
   .proh2 {
-    margin-top: 130px;
+    margin-top: 150px;
     text-align: center;
     margin-bottom: 3rem;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: bold;
     color: #111122;
   }
@@ -545,6 +637,7 @@ header {
   }
 
   .project {
+    box-shadow: 2px 3px 14px 7px rgb(102, 91, 120);
     border: 1px solid #141414;
     max-width: 400px;
     position: relative;
@@ -558,9 +651,11 @@ header {
 
   .project img {
     max-width: 100%;
-    transition: transform 2s ease-in-out; /* added transition for image scaling on hover */
+    transition: transform 1s ease-in-out; /* added transition for image scaling on hover */
   }
-
+  .sec-icons {
+    display: block;
+  }
   .project .project-info {
     color: #111122;
     position: absolute;
@@ -572,12 +667,12 @@ header {
     height: 100%;
     opacity: 1;
     transform: translateY(65%); /* initially move the info off-screen */
-    transition: opacity 0.9s ease-in-out, transform 0.9s ease-in-out;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
   }
 
   .project:hover img {
     cursor: pointer;
-    transform: scale(1.2); /* increase image size on hover */
+    transform: scale(1.1); /* increase image size on hover */
   }
 
   .project:hover .project-info {
@@ -594,17 +689,17 @@ header {
 
   #kontakt {
     padding: 0;
-    margin: 295px 25%;
-    background: var(--gradient-light-pol);
+    margin: 280px 25%;
+    background-color: #71d2c0;
     display: flex;
     flex-direction: column;
-
+    box-shadow: 2px 3px 14px 7px rgb(102, 91, 120);
     align-items: center;
   }
   .contact-name {
     margin: 20px 0;
     text-align: center;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: bold;
     color: #111122;
   }
@@ -627,6 +722,7 @@ header {
   }
   #form-send:hover {
     box-shadow: 0px 0px 10px #2f404d;
+    cursor: pointer;
   }
   #footer {
     display: flex;

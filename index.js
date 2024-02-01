@@ -1,7 +1,7 @@
 /*Dark/lightmode*/
 function Darkmode() {
-  var element = document.body;
-  var btn = document.getElementById("modeSwitcher");
+  let element = document.body;
+  let btn = document.getElementById("modeSwitcher");
   element.classList.toggle("dark-mode");
   if (element.classList.contains("dark-mode")) btn.innerHTML = "🌙";
   else btn.innerHTML = "💡";
@@ -9,14 +9,14 @@ function Darkmode() {
 
 /*Smooth scroll*/
 document.addEventListener("DOMContentLoaded", function () {
-  var navLinks = document.querySelectorAll("nav a");
+  let navLinks = document.querySelectorAll("nav a");
 
   navLinks.forEach(function (link) {
     link.addEventListener("click", function (e) {
       e.preventDefault();
 
-      var targetId = link.getAttribute("href").substring(1);
-      var targetSection = document.getElementById(targetId);
+      let targetId = link.getAttribute("href").substring(1);
+      let targetSection = document.getElementById(targetId);
 
       targetSection.scrollIntoView({ behavior: "smooth" });
     });
