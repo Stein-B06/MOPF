@@ -112,7 +112,6 @@ header {
 }
 .nav-list a {
   text-decoration: none;
-  /* color: #111122; */
   font-size: 16px;
 }
 
@@ -121,7 +120,6 @@ header {
   display: none;
   flex-direction: column;
   z-index: 1000;
-  margin-bottom: 10px;
 }
 
 .menu-toggle span {
@@ -175,6 +173,33 @@ header {
   );
 }
 
+@keyframes neonlight {
+  0% {
+    color: #2f404d;
+    text-shadow: 0 0 10px rgb(135, 18, 126);
+  }
+  2% {
+    color: #e8e2e7;
+    text-shadow: 0 0 10px rgb(135, 18, 126);
+  }
+  3% {
+    color: #2f404d;
+    text-shadow: 0 0 10px rgb(135, 18, 126);
+  }
+  4% {
+    color: #e8e2e7;
+    text-shadow: 0 0 10px rgb(135, 18, 126);
+  }
+  6% {
+    color: #2f404d;
+    text-shadow: 0 0 10px rgb(135, 18, 126);
+  }
+  100% {
+    color: #e8e2e7;
+    text-shadow: 0 0 10px rgb(135, 18, 126);
+  }
+}
+
 /* Styling for the sidebar */
 .sidebar {
   position: fixed;
@@ -188,10 +213,10 @@ header {
   align-items: center;
 }
 
-.social-icon {
+/* .social-icon {
   display: block;
   text-decoration: none;
-}
+} */
 
 /*Responsive design for smaller screens*/
 
@@ -278,7 +303,7 @@ header {
     flex-direction: column;
     width: 100%;
     position: absolute;
-    top: 60px;
+    top: 50px;
     left: 0;
     padding: 20px;
     box-sizing: border-box;
@@ -304,40 +329,106 @@ header {
   .dark-mode .nav-list a {
     color: #85ebd9;
   }
-  .navn {
-    margin-top: 15px;
+  #main-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    margin: 15px;
     text-align: center;
-    font-size: 40px;
-    font-weight: bold;
-    color: #111122;
+    max-width: 550px;
+    box-shadow: 12px 9px 14px 2px rgb(102, 91, 120);
   }
-  .tittel {
-    text-align: center;
-    font-size: 25px;
-    color: #111122;
+  .dark-mode #main-card {
+    color: #e8e2e7;
+    text-shadow: 0 0 10px rgb(135, 18, 126);
+    box-shadow: 2px 1px 25px 5px rgb(173, 52, 180);
+    background-color: #111122;
   }
-  .short-aboutme {
-    padding: 12px;
-    text-align: center;
-    margin: 0 10px 0 10px;
-    color: #111122;
-    width: 75%;
-  }
-
   #avatar {
     width: 15em;
     height: 15em;
     border-radius: 50%;
     background-size: cover;
   }
+  .navn {
+    margin-top: 15px;
+    font-size: 20px;
+  }
+  .tittel {
+    font-size: 16px;
+    font-weight: bold;
+    font-style: oblique;
+  }
+  .short-aboutme {
+    padding: 12px;
+    font-size: 16px;
+  }
+  .main2-title {
+    text-align: center;
+    margin-top: 3.5em;
+  }
+  .dark-mode .main2-title {
+    color: #e8e2e7;
+    text-shadow: 0 0 10px rgb(135, 18, 126);
+    animation: neonlight 4s;
+  }
+
+  #main2 {
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .main2-title {
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 20px;
+  }
+  .about-p {
+    font-size: 16px;
+    border-radius: 15px;
+    box-shadow: 12px 9px 14px 2px rgb(102, 91, 120);
+    width: fit-content;
+    margin: 10px;
+    padding: 20px;
+  }
+  .dark-mode .about-p {
+    color: #e8e2e7;
+    text-shadow: 0 0 10px rgb(135, 18, 126);
+    box-shadow: 2px 1px 25px 5px rgb(173, 52, 180);
+    background-color: #111122;
+  }
+
+  #portrait-2 {
+    height: 14em;
+    width: 14em;
+    display: flex;
+    justify-content: center;
+    margin: 30px auto;
+    align-self: center;
+    border-radius: 12px;
+    box-shadow: 12px 20px 10px 8px rgb(102, 91, 120);
+  }
+  .dark-mode #portrait-2 {
+    box-shadow: 2px 10px 20px 8px rgb(173, 52, 180);
+  }
+  #avatar-2 {
+    object-fit: cover;
+    border-radius: 15px;
+    width: 15em;
+    height: 15em;
+  }
 
   .proh2 {
     margin-top: 130px;
     text-align: center;
     margin-bottom: 3rem;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: bold;
-    color: #111122;
   }
   #projects {
     display: flex;
@@ -363,7 +454,7 @@ header {
     overflow: hidden; /* added overflow property to contain the absolute positioned info */
   }
 
-  .project img {
+  .project .prosjekt-img {
     max-width: 100%;
     height: auto;
   }
@@ -372,19 +463,23 @@ header {
     text-align: center;
     padding: 10px;
     width: 100%;
-
     background-color: #e2dddf;
   }
 
   /* Contact section */
 
   #kontakt {
-    margin: 135px 50px;
+    border-radius: 15px;
+    margin: 145px 50px;
     background-color: #71d2c0;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-shadow: 12px 9px 14px 2px rgb(102, 91, 120);
+  }
+  .dark-mode #kontakt {
+    box-shadow: 2px 1px 25px 5px rgb(173, 52, 180);
   }
 
   .contact-name {
@@ -418,12 +513,20 @@ header {
     align-items: center;
   }
   #git-hub {
-    background-color: #85ebd9;
+    background-color: white;
     border-radius: 50%;
+    box-shadow: 0px 0px 20px #e2dddf;
+  }
+  .dark-mode #git-hub {
+    background-color: #85ebd9;
   }
   #linked-in {
-    background-color: #85ebd9;
+    background-color: white;
     border-radius: 50%;
+    box-shadow: 0px 0px 20px #e2dddf;
+  }
+  .dark-mode #linked-in {
+    background-color: #85ebd9;
   }
   #copyright {
     text-align: center;
@@ -521,15 +624,15 @@ header {
     border-radius: 50%;
     background-size: cover;
   }
-  #Om-meg {
+  /* #Om-meg {
     margin-top: 300px;
-  }
+  } */
   #main-card {
     border-radius: 15px;
     margin-top: 10px;
     text-align: center;
     max-width: 550px;
-    box-shadow: 0px 0px 10px 5px rgb(102, 91, 120);
+    box-shadow: 12px 9px 14px 2px rgb(102, 91, 120);
   }
   .dark-mode #main-card {
     color: #e8e2e7;
@@ -537,10 +640,12 @@ header {
     box-shadow: 2px 1px 25px 5px rgb(173, 52, 180);
     background-color: #111122;
   }
+
   .navn {
-    margin-top: 10px;
+    margin-top: 8px;
     font-size: 30px;
   }
+
   .tittel {
     font-size: 20px;
   }
@@ -552,57 +657,47 @@ header {
   /* About me section */
   .main2-title {
     text-align: center;
-    margin-top: 5.5em;
+    margin-top: 3.5em;
+    font-size: 30px;
+    margin-bottom: 15px;
   }
   .dark-mode .main2-title {
     color: #e8e2e7;
     text-shadow: 0 0 10px rgb(135, 18, 126);
     animation: neonlight 4s;
   }
-  @keyframes neonlight {
-    0% {
-      color: #2f404d;
-      text-shadow: 0 0 10px rgb(135, 18, 126);
-    }
-    2% {
-      color: #e8e2e7;
-      text-shadow: 0 0 10px rgb(135, 18, 126);
-    }
-    3% {
-      color: #2f404d;
-      text-shadow: 0 0 10px rgb(135, 18, 126);
-    }
-    4% {
-      color: #e8e2e7;
-      text-shadow: 0 0 10px rgb(135, 18, 126);
-    }
-    6% {
-      color: #2f404d;
-      text-shadow: 0 0 10px rgb(135, 18, 126);
-    }
-    100% {
-      color: #e8e2e7;
-      text-shadow: 0 0 10px rgb(135, 18, 126);
-    }
-  }
 
   #main2 {
-    border-radius: 15px;
-    margin: 6.5em 4em 3em 4em;
-    border: 5px solid rgb(102, 91, 120);
+    margin: 10.5em 4em 3em 4em;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
   }
+
   .about-p {
-    min-width: 50%;
-    max-width: 60%;
-    padding: 50px 50px 50px 50px;
+    box-shadow: 12px 9px 14px 2px rgb(102, 91, 120);
+    width: fit-content;
+    margin: 10px 20px;
+    padding: 20px;
+  }
+  .dark-mode .about-p {
+    color: #e8e2e7;
+    text-shadow: 0 0 10px rgb(135, 18, 126);
+    box-shadow: 2px 1px 25px 5px rgb(173, 52, 180);
+    background-color: #111122;
   }
 
   #portrait-2 {
     /* height: 16em; */
-    width: auto;
     display: flex;
-    justify-content: end;
-    margin: 10px;
+    align-self: self-end;
+    margin: 20px 0px;
+    border-radius: 12px;
+    box-shadow: 12px 9px 14px 2px rgb(102, 91, 120);
+  }
+  .dark-mode #portrait-2 {
+    box-shadow: 2px 3px 14px 7px rgb(102, 91, 120);
   }
   #avatar-2 {
     height: 350px;
@@ -611,12 +706,15 @@ header {
 
   /* Project section */
   .proh2 {
-    margin-top: 150px;
+    margin-top: 3.5em;
     text-align: center;
     margin-bottom: 3rem;
     font-size: 30px;
     font-weight: bold;
-    color: #111122;
+  }
+  .dark-mode .proh2 {
+    text-shadow: 0 0 10px rgb(135, 18, 126);
+    animation: neonlight 4s;
   }
 
   .flex-1,
@@ -624,20 +722,21 @@ header {
     display: flex;
     justify-content: space-evenly;
     padding: 10px;
+    margin: 10px;
   }
 
   #projects {
     margin-top: 25px;
     max-width: 100%;
+    max-height: 100%;
     padding: 30px;
   }
   #projects p {
-    display: inline-block;
     margin: 20px 50px;
   }
 
   .project {
-    box-shadow: 2px 3px 14px 7px rgb(102, 91, 120);
+    box-shadow: 12px 9px 14px 2px rgb(102, 91, 120);
     border: 1px solid #141414;
     max-width: 400px;
     position: relative;
@@ -648,14 +747,42 @@ header {
     transform: translate(50% 50%);
     overflow: hidden; /* added overflow property to contain the absolute positioned info */
   }
+  .dark-mode .project {
+    color: #e8e2e7;
+    box-shadow: 2px 3px 14px 7px rgb(102, 91, 120);
+    background-color: #111122;
+  }
 
-  .project img {
+  .project .prosjekt-img {
     max-width: 100%;
     transition: transform 1s ease-in-out; /* added transition for image scaling on hover */
   }
   .sec-icons {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
+  #ghi {
+    background-color: #85ebd9;
+    border-radius: 50%;
+  }
+  #ghi:hover {
+    transform: scale(1.1);
+  }
+  .dark-mode #ghi:hover {
+    box-shadow: 0px 0px 20px #e2dddf;
+  }
+  #pbi {
+    background-color: #85ebd9;
+    border-radius: 50%;
+  }
+  #pbi:hover {
+    transform: scale(1.1);
+  }
+  .dark-mode #pbi:hover {
+    box-shadow: 0px 0px 20px #e2dddf;
+  }
+
   .project .project-info {
     color: #111122;
     position: absolute;
@@ -669,9 +796,14 @@ header {
     transform: translateY(65%); /* initially move the info off-screen */
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
   }
+  .dark-mode .project .project-info {
+    color: #e8e2e7;
+    text-shadow: 0 0 10px rgb(135, 18, 126);
+    box-shadow: 2px 1px 25px 5px rgb(173, 52, 180);
+    background-color: #111122;
+  }
 
-  .project:hover img {
-    cursor: pointer;
+  .project:hover .prosjekt-img {
     transform: scale(1.1); /* increase image size on hover */
   }
 
@@ -681,8 +813,10 @@ header {
     transform: translateX(0); /* move the info back on-screen */
     /* background-color: #6b9080; */
   }
-  .project-info p:hover {
-    cursor: pointer;
+
+  .dark-mode .project:hover .project-info {
+    background-color: #111122;
+    color: white;
   }
 
   /* Contact section */
@@ -701,7 +835,9 @@ header {
     text-align: center;
     font-size: 30px;
     font-weight: bold;
-    color: #111122;
+  }
+  .dark-mode .contact-name {
+    animation: neonlight 4s;
   }
   #contact-container {
     width: 50%;
@@ -730,7 +866,6 @@ header {
     flex-direction: row-reverse;
     justify-content: space-evenly;
     height: 100px;
-
     background-color: #3d898d;
   }
   #footer-icons {
