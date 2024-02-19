@@ -757,8 +757,8 @@ header {
   }
   #tools {
     display: flex;
-
     justify-content: center;
+    gap: 20px;
   }
   /* Project section */
   .proh2 {
