@@ -15,7 +15,7 @@ body {
 header {
   position: fixed;
   top: 0; /* So header is on top of page */
-  left: 0;
+  /* left: 0; */
   width: 100%;
   height: 60px;
   background-color: #3d898d;
@@ -103,8 +103,6 @@ header {
 .nav-list {
   list-style: none;
   display: flex;
-  margin: 0;
-  padding: 0;
 }
 
 .nav-list li {
@@ -212,11 +210,6 @@ header {
   flex-direction: column;
   align-items: center;
 }
-
-/* .social-icon {
-  display: block;
-  text-decoration: none;
-} */
 
 /*Responsive design for smaller screens*/
 
@@ -338,12 +331,12 @@ header {
     margin: 15px;
     text-align: center;
     max-width: 550px;
-    box-shadow: 12px 9px 14px 2px rgb(102, 91, 120);
+    box-shadow: 5px 2px 14px 2px rgb(102, 91, 120);
   }
   .dark-mode #main-card {
     color: #e8e2e7;
-    text-shadow: 0 0 10px rgb(135, 18, 126);
-    box-shadow: 2px 1px 25px 5px rgb(173, 52, 180);
+    /* text-shadow: 0 0 10px rgb(135, 18, 126); */
+    box-shadow: 1px 1px 10px 4px rgb(200, 41, 208);
     background-color: #111122;
   }
   #avatar {
@@ -354,18 +347,22 @@ header {
   }
   .navn {
     margin-top: 15px;
-    font-size: 20px;
+    font-size: 25px;
   }
   .tittel {
     font-size: 16px;
-    font-weight: bold;
-    font-style: oblique;
   }
   .short-aboutme {
     padding: 12px;
     font-size: 16px;
   }
   .main2-title {
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 25px;
+    font-family: "Amethysta", serif;
+    font-weight: 400;
+    font-style: normal;
     text-align: center;
     margin-top: 3.5em;
   }
@@ -383,23 +380,34 @@ header {
     flex-direction: column;
   }
 
-  .main2-title {
-    margin-bottom: 30px;
-    text-align: center;
-    font-size: 20px;
-  }
-  .about-p {
+  #about-1 {
     font-size: 16px;
     border-radius: 15px;
-    box-shadow: 12px 9px 14px 2px rgb(102, 91, 120);
+    box-shadow: 5px 2px 14px 2px rgb(102, 91, 120);
+    width: fit-content;
+    margin: 10px;
+    padding: 20px;
+    margin-bottom: 15px;
+  }
+  .dark-mode #about-1 {
+    color: #e8e2e7;
+    text-shadow: 0 0 10px rgb(135, 18, 126);
+    box-shadow: 1px 1px 10px 4px rgb(200, 41, 208);
+    background-color: #111122;
+  }
+
+  #about-2 {
+    font-size: 16px;
+    border-radius: 15px;
+    box-shadow: 5px 2px 14px 2px rgb(102, 91, 120);
     width: fit-content;
     margin: 10px;
     padding: 20px;
   }
-  .dark-mode .about-p {
+  .dark-mode #about-2 {
     color: #e8e2e7;
     text-shadow: 0 0 10px rgb(135, 18, 126);
-    box-shadow: 2px 1px 25px 5px rgb(173, 52, 180);
+    box-shadow: 1px 1px 10px 4px rgb(200, 41, 208);
     background-color: #111122;
   }
 
@@ -430,6 +438,13 @@ header {
     font-size: 20px;
     font-weight: bold;
   }
+  .dark-mode .proh2 {
+    color: #e8e2e7;
+    text-shadow: 0 0 10px rgb(135, 18, 126);
+    font-family: "Amethysta", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
   #projects {
     display: flex;
     flex-direction: column;
@@ -441,12 +456,12 @@ header {
     padding: 20px 50px;
   }
   .project {
+    box-shadow: 12px 9px 14px 2px rgb(102, 91, 120);
     border: 1px solid #141414;
     border-radius: 12px;
     width: 350px;
     height: 400px;
     flex-direction: column;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -465,8 +480,22 @@ header {
     width: 100%;
     background-color: #e2dddf;
   }
+  .dark-mode .project .project-info {
+    color: #e8e2e7;
+    text-shadow: 0 0 10px rgb(135, 18, 126);
+    box-shadow: 2px 1px 25px 5px rgb(173, 52, 180);
+    background-color: #111122;
+  }
+  .dark-mode #ghi {
+    background-color: #85ebd9;
+    border-radius: 50%;
+  }
+  .dark-mode #pbi {
+    background-color: #85ebd9;
+    border-radius: 50%;
+  }
 
-  /* Contact section */
+  /* Styling for the Contact section */
 
   #kontakt {
     border-radius: 15px;
@@ -479,7 +508,7 @@ header {
     box-shadow: 12px 9px 14px 2px rgb(102, 91, 120);
   }
   .dark-mode #kontakt {
-    box-shadow: 2px 1px 25px 5px rgb(173, 52, 180);
+    box-shadow: 1px 1px 5px 4px rgb(173, 52, 180);
   }
 
   .contact-name {
@@ -500,6 +529,9 @@ header {
     padding: 5px 15px;
     border-radius: 12px;
   }
+
+  /* Styling for the footer section */
+
   #footer {
     height: 100px;
     width: 100%;
@@ -567,7 +599,6 @@ header {
     );
     clip-path: polygon(50% 100%, 0 0, 100% 0);
     background-size: 200% 200%;
-    /* animation: gradient 300s linear infinite; */
   }
 
   #portrait {
@@ -624,20 +655,21 @@ header {
     border-radius: 50%;
     background-size: cover;
   }
-  /* #Om-meg {
-    margin-top: 300px;
-  } */
+
   #main-card {
+    font-family: "Amethysta", serif;
+    font-weight: 400;
+    font-style: normal;
     border-radius: 15px;
     margin-top: 10px;
     text-align: center;
     max-width: 550px;
-    box-shadow: 12px 9px 14px 2px rgb(102, 91, 120);
+    box-shadow: 8px 6px 14px 2px rgb(102, 91, 120);
   }
   .dark-mode #main-card {
     color: #e8e2e7;
     text-shadow: 0 0 10px rgb(135, 18, 126);
-    box-shadow: 2px 1px 25px 5px rgb(173, 52, 180);
+    box-shadow: 1px 1px 10px 4px rgb(200, 41, 208);
     background-color: #111122;
   }
 
@@ -660,11 +692,17 @@ header {
     margin-top: 3.5em;
     font-size: 30px;
     margin-bottom: 15px;
+    font-family: "Amethysta", serif;
+    font-weight: 400;
+    font-style: normal;
   }
   .dark-mode .main2-title {
     color: #e8e2e7;
     text-shadow: 0 0 10px rgb(135, 18, 126);
     animation: neonlight 4s;
+    font-family: "Amethysta", serif;
+    font-weight: 400;
+    font-style: normal;
   }
 
   #main2 {
@@ -675,46 +713,69 @@ header {
     flex-direction: column;
   }
 
-  .about-p {
-    box-shadow: 12px 9px 14px 2px rgb(102, 91, 120);
+  #about-1 {
+    box-shadow: 8px 6px 14px 2px rgb(102, 91, 120);
     width: fit-content;
-    margin: 10px 20px;
+    margin: 45px 200px;
     padding: 20px;
+    border-radius: 6px;
   }
-  .dark-mode .about-p {
+  .dark-mode #about-1 {
     color: #e8e2e7;
     text-shadow: 0 0 10px rgb(135, 18, 126);
-    box-shadow: 2px 1px 25px 5px rgb(173, 52, 180);
+    box-shadow: 1px 1px 10px 4px rgb(200, 41, 208);
     background-color: #111122;
   }
 
-  #portrait-2 {
-    /* height: 16em; */
+  #about-2 {
     display: flex;
     align-self: self-end;
-    margin: 20px 0px;
-    border-radius: 12px;
-    box-shadow: 12px 9px 14px 2px rgb(102, 91, 120);
+    margin: 10px 20px;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 8px 6px 14px 2px rgb(102, 91, 120);
+    margin-bottom: 100px;
+    width: fit-content;
   }
-  .dark-mode #portrait-2 {
-    box-shadow: 2px 3px 14px 7px rgb(102, 91, 120);
-  }
-  #avatar-2 {
-    height: 350px;
-    width: 550px;
+  .dark-mode #about-2 {
+    color: #e8e2e7;
+    text-shadow: 0 0 10px rgb(135, 18, 126);
+    box-shadow: 1px 1px 10px 4px rgb(200, 41, 208);
+    background-color: #111122;
   }
 
+  #header-tools {
+    text-align: center;
+    font-family: "Amethysta", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+    margin-bottom: 15px;
+    font-family: "Amethysta", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  #tools {
+    display: flex;
+
+    justify-content: center;
+  }
   /* Project section */
   .proh2 {
+    font-family: "Amethysta", serif;
+    font-weight: 400;
+    font-style: normal;
     margin-top: 3.5em;
     text-align: center;
     margin-bottom: 3rem;
     font-size: 30px;
-    font-weight: bold;
   }
   .dark-mode .proh2 {
     text-shadow: 0 0 10px rgb(135, 18, 126);
     animation: neonlight 4s;
+    font-family: "Amethysta", serif;
+    font-weight: 400;
+    font-style: normal;
   }
 
   .flex-1,
@@ -749,7 +810,7 @@ header {
   }
   .dark-mode .project {
     color: #e8e2e7;
-    box-shadow: 2px 3px 14px 7px rgb(102, 91, 120);
+    box-shadow: 1px 1px 10px 4px rgb(200, 41, 208);
     background-color: #111122;
   }
 
@@ -799,7 +860,6 @@ header {
   .dark-mode .project .project-info {
     color: #e8e2e7;
     text-shadow: 0 0 10px rgb(135, 18, 126);
-    box-shadow: 2px 1px 25px 5px rgb(173, 52, 180);
     background-color: #111122;
   }
 
@@ -829,6 +889,9 @@ header {
     flex-direction: column;
     box-shadow: 2px 3px 14px 7px rgb(102, 91, 120);
     align-items: center;
+  }
+  .dark-mode #kontakt {
+    box-shadow: 1px 1px 10px 4px rgb(200, 41, 208);
   }
   .contact-name {
     margin: 20px 0;
