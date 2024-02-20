@@ -430,12 +430,35 @@ header {
     width: 15em;
     height: 15em;
   }
+  #header-tools {
+    margin-top: 50px;
+    text-align: center;
+    font-family: "Amethysta", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+  }
+  .dark-mode #header-tools {
+    color: #e8e2e7;
+    text-shadow: 0 0 10px rgb(135, 18, 126);
+    animation: neonlight 4s;
+    font-family: "Amethysta", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  #tools {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
 
   .proh2 {
     margin-top: 130px;
     text-align: center;
     margin-bottom: 3rem;
-    font-size: 20px;
+    font-size: 25px;
     font-weight: bold;
   }
   .dark-mode .proh2 {
@@ -750,7 +773,12 @@ header {
     font-weight: 400;
     font-style: normal;
     font-size: 30px;
-    margin-bottom: 15px;
+    margin-bottom: 35px;
+  }
+  .dark-mode #header-tools {
+    color: #e8e2e7;
+    text-shadow: 0 0 10px rgb(135, 18, 126);
+    animation: neonlight 4s;
     font-family: "Amethysta", serif;
     font-weight: 400;
     font-style: normal;
@@ -758,7 +786,12 @@ header {
   #tools {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 40px;
+  }
+  #react-icon {
+    background-color: #111122;
+    border-radius: 12px;
+    padding: 3px;
   }
   /* Project section */
   .proh2 {
@@ -897,7 +930,9 @@ header {
     margin: 20px 0;
     text-align: center;
     font-size: 30px;
-    font-weight: bold;
+    font-family: "Amethysta", serif;
+    font-weight: 400;
+    font-style: normal;
   }
   .dark-mode .contact-name {
     animation: neonlight 4s;
