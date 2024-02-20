@@ -788,10 +788,77 @@ header {
     justify-content: center;
     gap: 40px;
   }
+
+  /* Styling for the tools icons */
+  #html-icon {
+    background-color: #111122;
+    border-radius: 12px;
+    padding: 3px;
+    transition: 0.2s;
+  }
+  #html-icon:hover {
+    box-shadow: 0px 0px 20px #e2dddf;
+    transition: all 0.2s linear;
+  }
+  #css-icon {
+    background-color: #111122;
+    border-radius: 12px;
+    padding: 3px;
+    transition: 0.2s;
+  }
+  #css-icon:hover {
+    box-shadow: 0px 0px 20px #e2dddf;
+    transition: all 0.2s linear;
+  }
+  #js-icon {
+    background-color: #111122;
+    border-radius: 12px;
+    padding: 3px;
+    transition: 0.2s;
+  }
+  #js-icon:hover {
+    box-shadow: 0px 0px 20px #e2dddf;
+    transition: all 0.2s linear;
+  }
+  #ts-icon {
+    background-color: #111122;
+    border-radius: 12px;
+    padding: 3px;
+    transition: 0.2s;
+  }
+  #ts-icon:hover {
+    box-shadow: 0px 0px 20px #e2dddf;
+    transition: all 0.2s linear;
+  }
   #react-icon {
     background-color: #111122;
     border-radius: 12px;
     padding: 3px;
+    transition: 0.2s;
+  }
+  #react-icon:hover {
+    box-shadow: 0px 0px 20px #e2dddf;
+    transition: all 0.2s linear;
+  }
+  #figma-icon {
+    background-color: #111122;
+    border-radius: 12px;
+    padding: 3px;
+    transition: 0.2s;
+  }
+  #figma-icon:hover {
+    box-shadow: 0px 0px 20px #e2dddf;
+    transition: all 0.2s linear;
+  }
+  #vscode-icon {
+    background-color: #111122;
+    border-radius: 12px;
+    padding: 3px;
+    transition: 0.2s;
+  }
+  #vscode-icon:hover {
+    box-shadow: 0px 0px 20px #e2dddf;
+    transition: all 0.2s linear;
   }
   /* Project section */
   .proh2 {
