@@ -37,6 +37,9 @@ header {
   margin-left: 10px;
   margin-bottom: 10px;
 }
+#modeSwitcher:hover {
+  cursor: pointer;
+}
 .dark-mode #modeSwitcher {
   background-color: #3d898d;
   border: 3px solid purple;
@@ -44,15 +47,12 @@ header {
 .dark-mode {
   background-color: #2f404d;
 }
-#lightmode {
-  width: 30px;
-}
+
 /* Darkmode main section*/
 
 .dark-mode #pol {
   background: var(--gradient-dark-pol);
   background-size: 200% 200%;
-  /* animation: gradient 300s linear infinite; */
 }
 .dark-mode #portrait {
   background: var(--gradient-dark-portrait);
@@ -62,9 +62,12 @@ header {
 
 /* Darkmode for The project section */
 .dark-mode .proh2 {
-  font-weight: bold;
   color: #e2e2e8;
-  text-shadow: 0 0 10px rgb(48, 157, 204);
+  text-shadow: 0 0 10px rgb(135, 18, 126);
+  animation: neonlight 4s;
+  font-family: "Amethysta", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 /* Dark mode for the contact section */
@@ -211,14 +214,14 @@ header {
   align-items: center;
 }
 #sidebar-git-hub {
-  background-color: #85ebd9;
+  background-color: white;
   border-radius: 50%;
   box-shadow: 0px 0px 10px #e2dddf;
   margin-bottom: 10px;
   transition: 0.2s;
 }
 #sidebar-linked-in {
-  background-color: #85ebd9;
+  background-color: white;
   border-radius: 50%;
   box-shadow: 0px 0px 10px #e2dddf;
   transition: 0.2s;
@@ -239,6 +242,135 @@ header {
   transform: scale(1.1);
 }
 #sidebar-git-hub:hover {
+  box-shadow: 0px 0px 20px #e2dddf;
+  transform: scale(1.1);
+}
+
+/* Styling for the icons, dark-mode & hover*/
+
+/* Styling for the tools icons */
+#html-icon {
+  background-color: #111122;
+  border-radius: 12px;
+  padding: 3px;
+  transition: 0.2s;
+}
+#html-icon:hover {
+  box-shadow: 0px 0px 20px #e2dddf;
+  transition: all 0.2s linear;
+}
+#css-icon {
+  background-color: #111122;
+  border-radius: 12px;
+  padding: 3px;
+  transition: 0.2s;
+}
+#css-icon:hover {
+  box-shadow: 0px 0px 20px #e2dddf;
+  transition: all 0.2s linear;
+}
+#js-icon {
+  background-color: #111122;
+  border-radius: 12px;
+  padding: 3px;
+  transition: 0.2s;
+}
+#js-icon:hover {
+  box-shadow: 0px 0px 20px #e2dddf;
+  transition: all 0.2s linear;
+}
+#ts-icon {
+  background-color: #111122;
+  border-radius: 12px;
+  padding: 3px;
+  transition: 0.2s;
+}
+#ts-icon:hover {
+  box-shadow: 0px 0px 20px #e2dddf;
+  transition: all 0.2s linear;
+}
+#react-icon {
+  background-color: #111122;
+  border-radius: 12px;
+  padding: 3px;
+  transition: 0.2s;
+}
+#react-icon:hover {
+  box-shadow: 0px 0px 20px #e2dddf;
+  transition: all 0.2s linear;
+}
+#figma-icon {
+  background-color: #111122;
+  border-radius: 12px;
+  padding: 3px;
+  transition: 0.2s;
+}
+#figma-icon:hover {
+  box-shadow: 0px 0px 20px #e2dddf;
+  transition: all 0.2s linear;
+}
+#vscode-icon {
+  background-color: #111122;
+  border-radius: 12px;
+  padding: 3px;
+  transition: 0.2s;
+}
+#vscode-icon:hover {
+  box-shadow: 0px 0px 20px #e2dddf;
+  transition: all 0.2s linear;
+}
+
+/* Styling for the icons in the projects*/
+.dark-mode #ghi {
+  background-color: #85ebd9;
+  border-radius: 50%;
+  transition: 0.2s;
+}
+.dark-mode #pbi {
+  background-color: #85ebd9;
+  border-radius: 50%;
+  transition: 0.2s;
+}
+
+#ghi {
+  background-color: white;
+  border-radius: 50%;
+}
+#ghi:hover {
+  transform: scale(1.1);
+}
+.dark-mode #ghi:hover {
+  box-shadow: 0px 0px 20px #e2dddf;
+}
+#pbi {
+  background-color: white;
+  border-radius: 50%;
+}
+#pbi:hover {
+  transform: scale(1.1);
+}
+.dark-mode #pbi:hover {
+  box-shadow: 0px 0px 20px #e2dddf;
+}
+
+/*Styling for the icons in footer*/
+#git-hub {
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.2s;
+}
+
+#linked-in {
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.2s;
+}
+
+#linked-in:hover {
+  box-shadow: 0px 0px 20px #e2dddf;
+  transform: scale(1.1);
+}
+#git-hub:hover {
   box-shadow: 0px 0px 20px #e2dddf;
   transform: scale(1.1);
 }
@@ -348,11 +480,16 @@ header {
   }
   .nav-list a {
     color: #e2dddf;
-    text-decoration: none;
-    font-family: "Poppins", sans-serif;
   }
   .dark-mode .nav-list a {
     color: #85ebd9;
+  }
+
+  #avatar {
+    width: 15em;
+    height: 15em;
+    border-radius: 50%;
+    background-size: cover;
   }
   #main-card {
     display: flex;
@@ -371,12 +508,7 @@ header {
     box-shadow: 1px 1px 10px 4px rgb(200, 41, 208);
     background-color: #111122;
   }
-  #avatar {
-    width: 15em;
-    height: 15em;
-    border-radius: 50%;
-    background-size: cover;
-  }
+
   .navn {
     margin-top: 15px;
     font-size: 25px;
@@ -387,6 +519,10 @@ header {
   .short-aboutme {
     padding: 12px;
     font-size: 16px;
+  }
+
+  #main2 {
+    margin: 20px;
   }
   .main2-title {
     margin-bottom: 30px;
@@ -404,19 +540,10 @@ header {
     animation: neonlight 4s;
   }
 
-  #main2 {
-    border-radius: 15px;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-  }
-
   #about-1 {
     font-size: 16px;
     border-radius: 15px;
     box-shadow: 5px 2px 14px 2px rgb(102, 91, 120);
-    width: fit-content;
     margin: 10px;
     padding: 20px;
     margin-bottom: 15px;
@@ -432,7 +559,6 @@ header {
     font-size: 16px;
     border-radius: 15px;
     box-shadow: 5px 2px 14px 2px rgb(102, 91, 120);
-    width: fit-content;
     margin: 10px;
     padding: 20px;
   }
@@ -456,12 +582,12 @@ header {
   .dark-mode #portrait-2 {
     box-shadow: 2px 10px 20px 8px rgb(173, 52, 180);
   }
-  #avatar-2 {
+  /* #avatar-2 {
     object-fit: cover;
     border-radius: 15px;
     width: 15em;
     height: 15em;
-  }
+  } */
   #header-tools {
     margin-top: 50px;
     text-align: center;
@@ -491,15 +617,8 @@ header {
     text-align: center;
     margin-bottom: 3rem;
     font-size: 25px;
-    font-weight: bold;
   }
-  .dark-mode .proh2 {
-    color: #e8e2e7;
-    text-shadow: 0 0 10px rgb(135, 18, 126);
-    font-family: "Amethysta", serif;
-    font-weight: 400;
-    font-style: normal;
-  }
+
   #projects {
     display: flex;
     flex-direction: column;
@@ -523,6 +642,9 @@ header {
     margin-bottom: 50px;
     overflow: hidden; /* added overflow property to contain the absolute positioned info */
   }
+  .dark-mode .project {
+    box-shadow: none;
+  }
 
   .project .prosjekt-img {
     max-width: 100%;
@@ -538,16 +660,7 @@ header {
   .dark-mode .project .project-info {
     color: #e8e2e7;
     text-shadow: 0 0 10px rgb(135, 18, 126);
-    box-shadow: 2px 1px 25px 5px rgb(173, 52, 180);
     background-color: #111122;
-  }
-  .dark-mode #ghi {
-    background-color: #85ebd9;
-    border-radius: 50%;
-  }
-  .dark-mode #pbi {
-    background-color: #85ebd9;
-    border-radius: 50%;
   }
 
   /* Styling for the Contact section */
@@ -569,9 +682,7 @@ header {
   .contact-name {
     padding: 15px;
   }
-  #contact-container {
-    width: 80%;
-  }
+
   #form {
     gap: 10px;
     display: flex;
@@ -599,22 +710,7 @@ header {
     justify-content: center;
     align-items: center;
   }
-  #git-hub {
-    background-color: white;
-    border-radius: 50%;
-    box-shadow: 0px 0px 20px #e2dddf;
-  }
-  .dark-mode #git-hub {
-    background-color: #85ebd9;
-  }
-  #linked-in {
-    background-color: white;
-    border-radius: 50%;
-    box-shadow: 0px 0px 20px #e2dddf;
-  }
-  .dark-mode #linked-in {
-    background-color: #85ebd9;
-  }
+
   #copyright {
     text-align: center;
   }
@@ -622,9 +718,6 @@ header {
 /*Responsive design for larger screens*/
 
 @media (min-width: 768px) {
-  header {
-    margin: 0;
-  }
   .nav-list a {
     color: #e2dddf;
   }
@@ -632,11 +725,8 @@ header {
     color: #85ebd9;
     transition-duration: 0.2s;
   }
-  .live-icon p {
-    background-color: #3d898d;
-  }
+
   #main {
-    margin-top: vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -755,9 +845,6 @@ header {
     color: #e8e2e7;
     text-shadow: 0 0 10px rgb(135, 18, 126);
     animation: neonlight 4s;
-    font-family: "Amethysta", serif;
-    font-weight: 400;
-    font-style: normal;
   }
 
   #main2 {
@@ -767,13 +854,17 @@ header {
     justify-content: center;
     flex-direction: column;
   }
-
+  #aboutme {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+  }
   #about-1 {
     box-shadow: 8px 6px 14px 2px rgb(102, 91, 120);
-    width: fit-content;
-    margin: 45px 200px;
+    width: 50%;
     padding: 20px;
     border-radius: 6px;
+    margin-right: 30px;
   }
   .dark-mode #about-1 {
     color: #e8e2e7;
@@ -784,13 +875,12 @@ header {
 
   #about-2 {
     display: flex;
-    align-self: self-end;
+    width: 200px;
+    height: 200px;
     margin: 10px 20px;
     padding: 20px;
-    border-radius: 6px;
     box-shadow: 8px 6px 14px 2px rgb(102, 91, 120);
-    margin-bottom: 100px;
-    width: fit-content;
+    border-radius: 50%;
   }
   .dark-mode #about-2 {
     color: #e8e2e7;
@@ -811,9 +901,6 @@ header {
     color: #e8e2e7;
     text-shadow: 0 0 10px rgb(135, 18, 126);
     animation: neonlight 4s;
-    font-family: "Amethysta", serif;
-    font-weight: 400;
-    font-style: normal;
   }
   #tools {
     display: flex;
@@ -821,77 +908,6 @@ header {
     gap: 40px;
   }
 
-  /* Styling for the tools icons */
-  #html-icon {
-    background-color: #111122;
-    border-radius: 12px;
-    padding: 3px;
-    transition: 0.2s;
-  }
-  #html-icon:hover {
-    box-shadow: 0px 0px 20px #e2dddf;
-    transition: all 0.2s linear;
-  }
-  #css-icon {
-    background-color: #111122;
-    border-radius: 12px;
-    padding: 3px;
-    transition: 0.2s;
-  }
-  #css-icon:hover {
-    box-shadow: 0px 0px 20px #e2dddf;
-    transition: all 0.2s linear;
-  }
-  #js-icon {
-    background-color: #111122;
-    border-radius: 12px;
-    padding: 3px;
-    transition: 0.2s;
-  }
-  #js-icon:hover {
-    box-shadow: 0px 0px 20px #e2dddf;
-    transition: all 0.2s linear;
-  }
-  #ts-icon {
-    background-color: #111122;
-    border-radius: 12px;
-    padding: 3px;
-    transition: 0.2s;
-  }
-  #ts-icon:hover {
-    box-shadow: 0px 0px 20px #e2dddf;
-    transition: all 0.2s linear;
-  }
-  #react-icon {
-    background-color: #111122;
-    border-radius: 12px;
-    padding: 3px;
-    transition: 0.2s;
-  }
-  #react-icon:hover {
-    box-shadow: 0px 0px 20px #e2dddf;
-    transition: all 0.2s linear;
-  }
-  #figma-icon {
-    background-color: #111122;
-    border-radius: 12px;
-    padding: 3px;
-    transition: 0.2s;
-  }
-  #figma-icon:hover {
-    box-shadow: 0px 0px 20px #e2dddf;
-    transition: all 0.2s linear;
-  }
-  #vscode-icon {
-    background-color: #111122;
-    border-radius: 12px;
-    padding: 3px;
-    transition: 0.2s;
-  }
-  #vscode-icon:hover {
-    box-shadow: 0px 0px 20px #e2dddf;
-    transition: all 0.2s linear;
-  }
   /* Project section */
   .proh2 {
     font-family: "Amethysta", serif;
@@ -901,13 +917,6 @@ header {
     text-align: center;
     margin-bottom: 3rem;
     font-size: 30px;
-  }
-  .dark-mode .proh2 {
-    text-shadow: 0 0 10px rgb(135, 18, 126);
-    animation: neonlight 4s;
-    font-family: "Amethysta", serif;
-    font-weight: 400;
-    font-style: normal;
   }
 
   .flex-1,
@@ -955,26 +964,6 @@ header {
     justify-content: center;
     align-items: center;
   }
-  #ghi {
-    background-color: #85ebd9;
-    border-radius: 50%;
-  }
-  #ghi:hover {
-    transform: scale(1.1);
-  }
-  .dark-mode #ghi:hover {
-    box-shadow: 0px 0px 20px #e2dddf;
-  }
-  #pbi {
-    background-color: #85ebd9;
-    border-radius: 50%;
-  }
-  #pbi:hover {
-    transform: scale(1.1);
-  }
-  .dark-mode #pbi:hover {
-    box-shadow: 0px 0px 20px #e2dddf;
-  }
 
   .project .project-info {
     color: #111122;
@@ -1015,7 +1004,7 @@ header {
 
   #kontakt {
     padding: 0;
-    margin: 280px 25%;
+    margin: 180px 25%;
     background-color: #71d2c0;
     display: flex;
     flex-direction: column;
@@ -1070,23 +1059,5 @@ header {
     padding: 10px;
     display: flex;
     justify-content: center;
-  }
-  #git-hub {
-    background-color: #85ebd9;
-    border-radius: 50%;
-    transition: 0.2s;
-  }
-  #linked-in {
-    background-color: #85ebd9;
-    border-radius: 50%;
-    transition: 0.2s;
-  }
-  #linked-in:hover {
-    box-shadow: 0px 0px 20px #e2dddf;
-    transform: scale(1.1);
-  }
-  #git-hub:hover {
-    box-shadow: 0px 0px 20px #e2dddf;
-    transform: scale(1.1);
   }
 }
