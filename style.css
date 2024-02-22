@@ -978,6 +978,9 @@ header {
     transform: translateY(65%); /* initially move the info off-screen */
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
   }
+  .dark-mode .project {
+    box-shadow: none;
+  }
   .dark-mode .project .project-info {
     color: #e8e2e7;
     text-shadow: 0 0 10px rgb(135, 18, 126);
