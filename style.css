@@ -60,16 +60,6 @@ header {
   animation: gradient 50s linear infinite;
 }
 
-/* Darkmode for The project section */
-.dark-mode .proh2 {
-  color: #e2e2e8;
-  text-shadow: 0 0 10px rgb(135, 18, 126);
-  animation: neonlight 4s;
-  font-family: "Amethysta", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
 /* Dark mode for the contact section */
 .dark-mode #kontakt {
   background: var(--gradient-dark-pol);
@@ -217,20 +207,22 @@ header {
   background-color: white;
   border-radius: 50%;
   box-shadow: 0px 0px 10px #e2dddf;
-  margin-bottom: 10px;
+  margin-bottom: 25px;
   transition: 0.2s;
+  padding: 1px 1px 2px 1px;
 }
 #sidebar-linked-in {
   background-color: white;
   border-radius: 50%;
   box-shadow: 0px 0px 10px #e2dddf;
   transition: 0.2s;
+  padding: 1px;
 }
 .dark-mode #sidebar-git-hub {
   background-color: #85ebd9;
   border-radius: 50%;
   box-shadow: 0px 0px 10px #e2dddf;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 .dark-mode #sidebar-linked-in {
   background-color: #85ebd9;
@@ -245,8 +237,6 @@ header {
   box-shadow: 0px 0px 20px #e2dddf;
   transform: scale(1.1);
 }
-
-/* Styling for the icons, dark-mode & hover*/
 
 /* Styling for the tools icons */
 #html-icon {
@@ -315,6 +305,7 @@ header {
   padding: 3px;
   transition: 0.2s;
 }
+
 #vscode-icon:hover {
   box-shadow: 0px 0px 20px #e2dddf;
   transition: all 0.2s linear;
@@ -324,17 +315,15 @@ header {
 .dark-mode #ghi {
   background-color: #85ebd9;
   border-radius: 50%;
-  transition: 0.2s;
-}
-.dark-mode #pbi {
-  background-color: #85ebd9;
-  border-radius: 50%;
-  transition: 0.2s;
+  border: 1px solid #85ebd9;
+  padding: 0 0 1px 0;
 }
 
 #ghi {
   background-color: white;
   border-radius: 50%;
+  transition: 0.2s;
+  padding: 1px 1px 2px 1px;
 }
 #ghi:hover {
   transform: scale(1.1);
@@ -344,7 +333,9 @@ header {
 }
 #pbi {
   background-color: white;
-  border-radius: 50%;
+  border-radius: 40%;
+  transition: 0.2s;
+  padding: 1px;
 }
 #pbi:hover {
   transform: scale(1.1);
@@ -352,18 +343,25 @@ header {
 .dark-mode #pbi:hover {
   box-shadow: 0px 0px 20px #e2dddf;
 }
+.dark-mode #pbi {
+  background-color: #85ebd9;
+  border-radius: 40%;
+  padding: 1px;
+}
 
 /*Styling for the icons in footer*/
 #git-hub {
   background-color: white;
   border-radius: 50%;
   transition: 0.2s;
+  padding: 1px 1px 2px 1px;
 }
 
 #linked-in {
   background-color: white;
   border-radius: 50%;
   transition: 0.2s;
+  padding: 1px;
 }
 
 #linked-in:hover {
@@ -377,7 +375,7 @@ header {
 
 /*Responsive design for smaller screens*/
 
-@media (max-width: 768px) {
+@media (max-width: 860px) {
   .sidebar {
     display: none;
   }
@@ -522,17 +520,18 @@ header {
   }
 
   #main2 {
-    margin: 20px;
+    padding-top: 10px;
+    margin: 10px;
   }
   .main2-title {
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     text-align: center;
     font-size: 25px;
     font-family: "Amethysta", serif;
     font-weight: 400;
     font-style: normal;
     text-align: center;
-    margin-top: 3.5em;
+    margin-top: 4.5em;
   }
   .dark-mode .main2-title {
     color: #e8e2e7;
@@ -544,9 +543,8 @@ header {
     font-size: 16px;
     border-radius: 15px;
     box-shadow: 5px 2px 14px 2px rgb(102, 91, 120);
-    margin: 10px;
+    margin: 15px 10px;
     padding: 20px;
-    margin-bottom: 15px;
   }
   .dark-mode #about-1 {
     color: #e8e2e7;
@@ -555,41 +553,8 @@ header {
     background-color: #111122;
   }
 
-  #about-2 {
-    font-size: 16px;
-    border-radius: 15px;
-    box-shadow: 5px 2px 14px 2px rgb(102, 91, 120);
-    margin: 10px;
-    padding: 20px;
-  }
-  .dark-mode #about-2 {
-    color: #e8e2e7;
-    text-shadow: 0 0 10px rgb(135, 18, 126);
-    box-shadow: 1px 1px 10px 4px rgb(200, 41, 208);
-    background-color: #111122;
-  }
-
-  #portrait-2 {
-    height: 14em;
-    width: 14em;
-    display: flex;
-    justify-content: center;
-    margin: 30px auto;
-    align-self: center;
-    border-radius: 12px;
-    box-shadow: 12px 20px 10px 8px rgb(102, 91, 120);
-  }
-  .dark-mode #portrait-2 {
-    box-shadow: 2px 10px 20px 8px rgb(173, 52, 180);
-  }
-  /* #avatar-2 {
-    object-fit: cover;
-    border-radius: 15px;
-    width: 15em;
-    height: 15em;
-  } */
   #header-tools {
-    margin-top: 50px;
+    margin-top: 65px;
     text-align: center;
     font-family: "Amethysta", serif;
     font-weight: 400;
@@ -605,6 +570,10 @@ header {
     font-style: normal;
   }
   #tools {
+    font-family: "Amethysta", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25px;
     margin-top: 50px;
     display: flex;
     justify-content: center;
@@ -613,54 +582,70 @@ header {
   }
 
   .proh2 {
+    padding-top: 90px;
     margin-top: 130px;
     text-align: center;
     margin-bottom: 3rem;
     font-size: 25px;
+    font-family: "Amethysta", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  /* Darkmode for project section header */
+  .dark-mode .proh2 {
+    color: #e2e2e8;
+    text-shadow: 0 0 10px rgb(135, 18, 126);
+    animation: neonlight 4s;
+    font-family: "Amethysta", serif;
+    font-weight: 400;
+    font-style: normal;
   }
 
   #projects {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     margin: 50px;
   }
   #projects p {
     display: inline-block;
-    padding: 20px 50px;
+    padding: 20px 30px;
   }
   .project {
     box-shadow: 12px 9px 14px 2px rgb(102, 91, 120);
-    border: 1px solid #141414;
-    border-radius: 12px;
-    width: 350px;
-    height: 400px;
-    flex-direction: column;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin-bottom: 50px;
-    overflow: hidden; /* added overflow property to contain the absolute positioned info */
   }
   .dark-mode .project {
-    box-shadow: none;
+    box-shadow: 1px 1px 5px 4px rgb(173, 52, 180);
   }
 
   .project .prosjekt-img {
-    max-width: 100%;
-    height: auto;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+    padding: 0px;
+    margin-bottom: -7px;
   }
 
   .project .project-info {
     text-align: center;
     padding: 10px;
-    width: 100%;
     background-color: #e2dddf;
   }
+  .project .project-info h2 {
+    font-size: 20px;
+  }
+  .project-description {
+    font-size: 2vmax;
+  }
+
   .dark-mode .project .project-info {
     color: #e8e2e7;
     text-shadow: 0 0 10px rgb(135, 18, 126);
     background-color: #111122;
+  }
+  .sec-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   /* Styling for the Contact section */
@@ -717,7 +702,7 @@ header {
 }
 /*Responsive design for larger screens*/
 
-@media (min-width: 768px) {
+@media (min-width: 860px) {
   .nav-list a {
     color: #e2dddf;
   }
@@ -873,22 +858,6 @@ header {
     background-color: #111122;
   }
 
-  #about-2 {
-    display: flex;
-    width: 200px;
-    height: 200px;
-    margin: 10px 20px;
-    padding: 20px;
-    box-shadow: 8px 6px 14px 2px rgb(102, 91, 120);
-    border-radius: 50%;
-  }
-  .dark-mode #about-2 {
-    color: #e8e2e7;
-    text-shadow: 0 0 10px rgb(135, 18, 126);
-    box-shadow: 1px 1px 10px 4px rgb(200, 41, 208);
-    background-color: #111122;
-  }
-
   #header-tools {
     text-align: center;
     font-family: "Amethysta", serif;
@@ -906,9 +875,14 @@ header {
     display: flex;
     justify-content: center;
     gap: 40px;
+    margin-bottom: 120px;
   }
 
   /* Project section */
+  #projects {
+    margin-top: 25px;
+    padding: 30px;
+  }
   .proh2 {
     font-family: "Amethysta", serif;
     font-weight: 400;
@@ -918,69 +892,82 @@ header {
     margin-bottom: 3rem;
     font-size: 30px;
   }
+  /* Darkmode for project section header */
+  .dark-mode .proh2 {
+    color: #e2e2e8;
+    text-shadow: 0 0 10px rgb(135, 18, 126);
+    animation: neonlight 4s;
+    font-family: "Amethysta", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
 
-  .flex-1,
-  .flex-2 {
+  .flex-1 {
     display: flex;
     justify-content: space-evenly;
-    padding: 10px;
-    margin: 10px;
   }
 
-  #projects {
-    margin-top: 25px;
-    max-width: 100%;
-    max-height: 100%;
-    padding: 30px;
-  }
-  #projects p {
-    margin: 20px 50px;
+  .flex-2 {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
   }
 
   .project {
     box-shadow: 12px 9px 14px 2px rgb(102, 91, 120);
-    border: 1px solid #141414;
-    max-width: 400px;
+    width: 30%;
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 5px;
-    transform: translate(50% 50%);
     overflow: hidden; /* added overflow property to contain the absolute positioned info */
   }
   .dark-mode .project {
     color: #e8e2e7;
-    box-shadow: 1px 1px 10px 4px rgb(200, 41, 208);
+    box-shadow: 1px 1px 5px 4px rgb(173, 52, 180);
     background-color: #111122;
   }
 
   .project .prosjekt-img {
-    max-width: 100%;
-    transition: transform 1s ease-in-out; /* added transition for image scaling on hover */
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .project-description {
+    padding: 5px 20px;
   }
   .sec-icons {
+    position: fixed;
+    bottom: 1vw;
+    left: 10vw;
+    right: 10vw;
+    gap: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
   .project .project-info {
-    color: #111122;
+    background-color: #3d898d;
+    color: #e8e2e7;
     position: absolute;
-    top: 0;
-    left: 50;
+    top: 0%;
+    bottom: 15%;
     text-align: center;
-    padding: 20px;
-    width: 400px;
-    height: 100%;
     opacity: 1;
-    transform: translateY(65%); /* initially move the info off-screen */
+    transform: translatey(100%); /* initially move the info off-screen */
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
   }
-  .dark-mode .project {
-    box-shadow: none;
+  .project .project-info h2 {
+    padding-top: 2vw;
+    margin-bottom: 15px;
+    font-size: 1.5vw;
+    color: #e8e2e7;
   }
+  .project .project-info p {
+    font-size: 1vmax;
+    padding: 30px;
+  }
+
   .dark-mode .project .project-info {
     color: #e8e2e7;
     text-shadow: 0 0 10px rgb(135, 18, 126);
@@ -988,12 +975,14 @@ header {
   }
 
   .project:hover .prosjekt-img {
-    transform: scale(1.1); /* increase image size on hover */
+    cursor: pointer;
   }
 
   .project:hover .project-info {
-    opacity: 0.8;
-    background-color: #e2dddf;
+    cursor: pointer;
+    height: 100%;
+    opacity: 1;
+    background-color: #3d898d;
     transform: translateX(0); /* move the info back on-screen */
     /* background-color: #6b9080; */
   }
