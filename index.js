@@ -54,3 +54,30 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+// For filling the experience bars in the tool section based on the fillPercentages
+document.addEventListener("DOMContentLoaded", function () {
+  // Define an object to store fill percentages for each experience bar
+  let fillPercentages = {
+    1: 90, // Fill percentage for experiencebar in the tools section with data-id="1" id="2" etc.
+    2: 90,
+    3: 50,
+    4: 30,
+    5: 50,
+    6: 60,
+    7: 90,
+    8: 20,
+    9: 20,
+  };
+
+  // Loop through each entry in the fillPercentages of the experiencebar
+  for (let id in fillPercentages) {
+    // Select the experience bar element with the id
+    let experienceBar = document.querySelector(
+      '.experience-bar[data-id="' + id + '"]'
+    );
+
+    // Set the width of the experience bar dynamically based on the filled percentages
+    experienceBar.style.width = fillPercentages[id] + "%";
+  }
+});
