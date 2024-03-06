@@ -609,10 +609,15 @@ header {
     font-weight: bold;
     text-decoration: none;
   }
+  .elink:hover {
+    color: #3d898d;
+  }
   .dark-mode .elink {
     color: #85ebd9;
   }
-
+  .dark-mode .elink:hover {
+    color: #df89dd;
+  }
   /* Styling for the footer section */
 
   #footer {
