@@ -21,10 +21,8 @@ header {
   width: 100%;
   height: 60px;
   background-color: #3d898d;
-  text-align: center;
   display: flex;
   align-items: center;
-  justify-content: center;
   z-index: 1000;
 }
 .dark-mode header {
@@ -88,7 +86,7 @@ header {
   align-items: center;
   width: 100%;
   justify-content: end;
-  margin: 30px;
+  margin: 10px;
 }
 
 .nav-list {
@@ -101,7 +99,7 @@ header {
 }
 .nav-list a {
   text-decoration: none;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .menu-toggle {
@@ -220,7 +218,6 @@ header {
   background-color: #85ebd9;
   border-radius: 50%;
   box-shadow: 0px 0px 10px #e2dddf;
-  margin-bottom: 15px;
 }
 .dark-mode #sidebar-linked-in {
   background-color: #85ebd9;
@@ -236,140 +233,42 @@ header {
   transform: scale(1.1);
 }
 
-/* Styling for the tools icons */
-#html-icon {
-  background-color: #111122;
-  border-radius: 12px;
-  padding: 3px;
-  transition: 0.2s;
-}
-#html-icon:hover {
-  box-shadow: 0px 0px 20px #e2dddf;
-  transition: all 0.2s linear;
-}
-#css-icon {
-  background-color: #111122;
-  border-radius: 12px;
-  padding: 3px;
-  transition: 0.2s;
-}
-#css-icon:hover {
-  box-shadow: 0px 0px 20px #e2dddf;
-  transition: all 0.2s linear;
-}
-#js-icon {
-  background-color: #111122;
-  border-radius: 12px;
-  padding: 3px;
-  transition: 0.2s;
-}
-#js-icon:hover {
-  box-shadow: 0px 0px 20px #e2dddf;
-  transition: all 0.2s linear;
-}
-#ts-icon {
-  background-color: #111122;
-  border-radius: 12px;
-  padding: 3px;
-  transition: 0.2s;
-}
-#ts-icon:hover {
-  box-shadow: 0px 0px 20px #e2dddf;
-  transition: all 0.2s linear;
-}
-#react-icon {
-  background-color: #111122;
-  border-radius: 12px;
-  padding: 3px;
-  transition: 0.2s;
-}
-#react-icon:hover {
-  box-shadow: 0px 0px 20px #e2dddf;
-  transition: all 0.2s linear;
-}
-#figma-icon {
-  background-color: #111122;
-  border-radius: 12px;
-  padding: 3px;
-  transition: 0.2s;
-}
-#figma-icon:hover {
-  box-shadow: 0px 0px 20px #e2dddf;
-  transition: all 0.2s linear;
-}
-#vscode-icon {
-  background-color: #111122;
-  border-radius: 12px;
-  padding: 3px;
-  transition: 0.2s;
-}
-
-#vscode-icon:hover {
-  box-shadow: 0px 0px 20px #e2dddf;
-  transition: all 0.2s linear;
-}
-#njs-icon {
-  border-radius: 12px;
-  padding: 3px;
-  transition: 0.2s;
-  background-color: #4d9a9e;
-}
-
-#njs-icon:hover {
-  box-shadow: 0px 0px 20px #e2dddf;
-  transition: all 0.2s linear;
-}
-#tw-icon {
-  background-color: #111122;
-  border-radius: 12px;
-  padding: 3px;
-  transition: 0.2s;
-}
-#tw-icon:hover {
-  box-shadow: 0px 0px 20px #e2dddf;
-  transition: all 0.2s linear;
-}
-
 /* Styling for the icons in the projects*/
-.dark-mode #ghi {
-  background-color: #85ebd9;
-  border-radius: 50%;
-  border: 1px solid #85ebd9;
-  padding: 0 0 1px 0;
-}
-
 #ghi {
   background-color: white;
   border-radius: 50%;
   transition: 0.2s;
-  padding: 1px 1px 2px 1px;
 }
+
+.dark-mode #ghi {
+  background-color: #85ebd9;
+}
+
 #ghi:hover {
   transform: scale(1.1);
 }
 .dark-mode #ghi:hover {
-  box-shadow: 0px 0px 20px #e2dddf;
+  box-shadow: 0px 0px 10px #e2dddf;
 }
 #pbi {
   background-color: white;
   border-radius: 40%;
   transition: 0.2s;
-  padding: 1px;
 }
 #pbi:hover {
   transform: scale(1.1);
 }
 .dark-mode #pbi:hover {
-  box-shadow: 0px 0px 20px #e2dddf;
+  box-shadow: 0px 0px 10px #e2dddf;
 }
 .dark-mode #pbi {
   background-color: #85ebd9;
-  border-radius: 40%;
-  padding: 1px;
 }
 
 /*Styling for the icons in footer*/
 #git-hub {
+  width: 30px;
+  height: 30px;
   background-color: white;
   border-radius: 50%;
   transition: 0.2s;
@@ -377,6 +276,8 @@ header {
 }
 
 #linked-in {
+  width: 30px;
+  height: 30px;
   background-color: white;
   border-radius: 50%;
   transition: 0.2s;
@@ -394,12 +295,22 @@ header {
 
 /*Responsive design for smaller screens*/
 
-@media (max-width: 860px) {
+@media (max-width: 768px) {
   .sidebar {
     display: none;
   }
   .menu-toggle {
+    margin: 10px;
     display: flex;
+  }
+  #logo {
+    position: absolute;
+    top: 5px;
+    left: 42.5%;
+    display: flex;
+    align-items: center;
+    margin: 5px;
+    border-radius: 50%;
   }
 
   #main {
@@ -424,6 +335,7 @@ header {
     background-size: 200% 200%;
   }
   .nav-list {
+    text-align: center;
     display: none;
     flex-direction: column;
     width: 100%;
@@ -575,44 +487,6 @@ header {
     background-color: #111122;
   }
 
-  #header-tools {
-    margin-top: 65px;
-    text-align: center;
-    font-family: "Amethysta", serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 25px;
-  }
-  .dark-mode #header-tools {
-    color: #e8e2e7;
-    text-shadow: 0 0 10px rgb(135, 18, 126);
-    animation: neonlight 4s;
-  }
-  #tools {
-    margin-top: 50px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-  .skill {
-    border-radius: 12px 12px 0px 12px;
-    box-shadow: 5px 3px 10px 2px rgb(102, 91, 120);
-  }
-
-  .experience-bar {
-    width: 100%; /* Adjust as needed */
-    height: 10px; /* Adjust as needed */
-  }
-
-  .experience-bar::after {
-    content: "";
-    display: block;
-    height: 100%;
-    width: var(--fill-percentage);
-    background-color: #579858; /* Color of the filled part of the bar */
-  }
-
   .proh2 {
     padding-top: 90px;
     margin-top: 210px;
@@ -622,6 +496,10 @@ header {
     font-family: "Amethysta", serif;
     font-weight: 400;
     font-style: normal;
+  }
+  .sec-icons {
+    display: flex;
+    justify-content: center;
   }
 
   /* Darkmode for project section header */
@@ -637,11 +515,25 @@ header {
   #projects {
     margin: 50px;
   }
+
   #projects p {
     display: inline-block;
     padding: 20px 30px;
   }
+
+  #ghi {
+    width: 5vw;
+    height: 5vw;
+  }
+
+  #pbi {
+    width: 5vw;
+    height: 5vw;
+  }
+
   .project {
+    display: flex;
+    flex-direction: column;
     box-shadow: 12px 9px 14px 2px rgb(102, 91, 120);
     margin-bottom: 50px;
   }
@@ -650,7 +542,7 @@ header {
   }
 
   .project .prosjekt-img {
-    width: 100%;
+    height: 250px;
     object-fit: cover;
     object-position: top;
     padding: 0px;
@@ -658,26 +550,22 @@ header {
   }
 
   .project .project-info {
-    text-align: center;
-    padding: 10px;
+    padding: 10px 20px 10px 20px;
     background-color: #e2dddf;
   }
   .project .project-info h2 {
     font-size: 20px;
+    text-align: center;
   }
   .project-description {
-    font-size: 2vmax;
+    box-shadow: 0px 0px 20px #e2dddf;
+    font-size: 1.9vmax;
   }
 
   .dark-mode .project .project-info {
     color: #e8e2e7;
     text-shadow: 0 0 10px rgb(135, 18, 126);
     background-color: #111122;
-  }
-  .sec-icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 
   /* Styling for the Contact section */
@@ -728,6 +616,10 @@ header {
   /* Styling for the footer section */
 
   #footer {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+    align-items: center;
     height: 100px;
     width: 100%;
     background-color: #3d898d;
@@ -742,17 +634,27 @@ header {
 
   #copyright {
     text-align: center;
+    font-size: 10px;
   }
 }
 /*Responsive design for larger screens*/
 
-@media (min-width: 860px) {
+@media (min-width: 768px) {
   .nav-list a {
     color: #e2dddf;
   }
   .nav-list a:hover {
     color: #85ebd9;
     transition-duration: 0.2s;
+  }
+
+  #logo {
+    position: absolute;
+    top: 5px;
+    left: 48.5%;
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
   }
 
   #main {
@@ -865,7 +767,8 @@ header {
   /* About me section */
   .main2-title {
     text-align: center;
-    margin-top: 3.5em;
+    margin-top: 1.5em;
+    padding-top: 50px;
     font-size: 30px;
     margin-bottom: 15px;
     font-family: "Amethysta", serif;
@@ -879,15 +782,16 @@ header {
   }
 
   #main2 {
+    padding-top: 50px;
     color: #121212;
-    margin: 10.5em 1em 3em 1em;
-    padding: 20px;
   }
+
   #aboutme {
     display: flex;
     justify-content: center;
     margin: 40px 0;
   }
+
   #about-1 {
     box-shadow: 8px 6px 14px 2px rgb(102, 91, 120);
     width: 50%;
@@ -901,49 +805,9 @@ header {
     background-color: #111122;
   }
 
-  #header-tools {
-    text-align: center;
-    font-family: "Amethysta", serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 30px;
-    color: #121212;
-    margin-top: 50px;
-    margin-bottom: 35px;
-  }
-  .dark-mode #header-tools {
-    color: #e8e2e7;
-    text-shadow: 0 0 10px rgb(135, 18, 126);
-    animation: neonlight 4s;
-  }
-  #tools {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 40px;
-    margin-bottom: 120px;
-  }
-  .skill {
-    box-shadow: 5px 3px 10px 2px rgb(102, 91, 120);
-  }
-
-  .experience-bar {
-    width: 100%; /* Adjust as needed */
-    height: 10px; /* Adjust as needed */
-  }
-
-  .experience-bar::after {
-    content: "";
-    display: block;
-    height: 100%;
-    width: (--fill-percentage);
-    background-color: #579858; /* Color of the filled part of the bar */
-  }
-
   /* Project section */
   #projects {
-    margin-top: 25px;
-    padding: 30px;
+    padding-bottom: 20px;
   }
   .proh2 {
     color: #121212;
@@ -951,9 +815,10 @@ header {
     font-weight: 400;
     font-style: normal;
     font-size: 30px;
-    margin-top: 3.5em;
+    margin-top: 1.5em;
     text-align: center;
     margin-bottom: 3rem;
+    padding-top: 100px;
   }
   /* Darkmode for project section header */
   .dark-mode .proh2 {
@@ -978,7 +843,7 @@ header {
 
   .project {
     box-shadow: 12px 9px 14px 2px rgb(102, 91, 120);
-    width: 30%;
+    width: 28%;
     position: relative;
     overflow: hidden; /* added overflow property to contain the absolute positioned info */
   }
@@ -996,19 +861,26 @@ header {
   }
 
   .project-description {
-    font-size: 1.1vmax;
-    padding: 15px 30px 0 30px;
+    font-size: 1vw;
+    padding: 5px 20px;
     color: #e8e2e7;
   }
   .sec-icons {
-    position: fixed;
-    top: 22vw;
-    left: 10vw;
-    right: 10vw;
     gap: 60px;
     display: flex;
     justify-content: center;
-    /* align-items: center; */
+    position: absolute;
+    bottom: 5px;
+    right: 20%;
+    left: 20%;
+  }
+  #ghi {
+    height: 2.5vw;
+    width: 2.5vw;
+  }
+  #pbi {
+    height: 2.5vw;
+    width: 2.5vw;
   }
 
   .project .project-info {
@@ -1017,15 +889,17 @@ header {
     position: absolute;
     top: 0;
     bottom: 1;
-    text-align: center;
+    /* text-align: center; */
     opacity: 1;
     transform: translatey(85%); /* initially move the info off-screen */
     transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
   }
   .project .project-info h2 {
-    padding-top: 2vw;
+    margin-bottom: 1vmax;
+    padding-top: 1vw;
     font-size: 1.5vw;
     color: #e8e2e7;
+    text-align: center;
   }
 
   .dark-mode .project .project-info {
@@ -1054,14 +928,14 @@ header {
   /* Contact section */
 
   #contact {
+    width: 50%;
     color: #121212;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 20vw;
-    margin: 400px 25% 200px 25%;
-    padding: 10px;
+    margin: 400px 25% 100px 25%;
+    padding: 30px;
     border-radius: 15px;
     box-shadow: 12px 9px 14px 2px rgb(102, 91, 120);
   }
@@ -1069,8 +943,8 @@ header {
     box-shadow: 1px 1px 10px 4px rgb(200, 41, 208);
   }
 
-  .contact-header {
-    margin-top: 10px;
+  .contact-header h2 {
+    margin-top: 20px;
     text-align: center;
     font-size: 30px;
     font-family: "Amethysta", serif;
@@ -1108,14 +982,11 @@ header {
     display: flex;
     align-items: center;
     flex-direction: row-reverse;
-    justify-content: space-evenly;
+    justify-content: center;
     height: 100px;
     background-color: #3d898d;
   }
   #footer-icons {
-    gap: 40px;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
+    display: none;
   }
 }
