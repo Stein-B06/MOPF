@@ -979,6 +979,9 @@ header {
   .dark-mode .elink {
     color: #85ebd9;
   }
+  .dark-mode .elink:hover {
+    color: #df89dd;
+  }
   .elink:hover {
     cursor: pointer;
     color: #3d898d;
