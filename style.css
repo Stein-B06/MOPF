@@ -17,7 +17,8 @@ body {
 /* Styling for header */
 header {
   position: fixed;
-  top: 0; /* So header is on top of page */
+  top: 0;
+  /* So header is on top of page */
   width: 100%;
   height: 60px;
   background-color: #3d898d;
@@ -25,6 +26,7 @@ header {
   align-items: center;
   z-index: 1000;
 }
+
 .dark-mode header {
   background-color: #111122;
 }
@@ -32,17 +34,21 @@ header {
 #modeSwitcher {
   border-radius: 50%;
   border: 3px solid #e2dddf;
-  padding: 4px 6px;
+  height: 30px;
+  width: 30px;
   background-color: #3d898d;
   margin: 10px;
 }
+
 #modeSwitcher:hover {
   cursor: pointer;
 }
+
 .dark-mode #modeSwitcher {
   background-color: #3d898d;
   border: 3px solid purple;
 }
+
 .dark-mode {
   background-color: #2f404d;
 }
@@ -53,6 +59,7 @@ header {
   background: var(--gradient-dark-pol);
   background-size: 200% 200%;
 }
+
 .dark-mode #portrait {
   background: var(--gradient-dark-portrait);
   background-size: 200% 200%;
@@ -69,11 +76,13 @@ header {
   background-color: #111122;
   color: #85ebd9;
 }
+
 .dark-mode #git-hub {
   background-color: #85ebd9;
   border-radius: 50%;
   box-shadow: 0px 0px 10px #e2dddf;
 }
+
 .dark-mode #linked-in {
   background-color: #85ebd9;
   border-radius: 50%;
@@ -85,7 +94,7 @@ header {
   display: flex;
   align-items: center;
   width: 100%;
-  justify-content: end;
+  justify-content: space-between;
   margin: 10px;
 }
 
@@ -97,6 +106,7 @@ header {
 .nav-list li {
   margin-right: 20px;
 }
+
 .nav-list a {
   text-decoration: none;
   font-size: 15px;
@@ -111,14 +121,16 @@ header {
 
 .menu-toggle span {
   height: 3px;
-  width: 25px;
+  width: 30px;
   background-color: #e2dddf;
   margin: 3.5px 0;
   transition: 0.3s;
 }
+
 .dark-mode .menu-toggle span {
   background-color: #85ebd9;
 }
+
 /*Styling for the "X" appearance */
 .menu-toggle span.change:nth-child(1) {
   transform: rotate(-45deg) translate(-6.5px, 4.5px);
@@ -165,22 +177,27 @@ header {
     color: #2f404d;
     text-shadow: 0 0 10px rgb(135, 18, 126);
   }
+
   2% {
     color: #e8e2e7;
     text-shadow: 0 0 10px rgb(135, 18, 126);
   }
+
   3% {
     color: #2f404d;
     text-shadow: 0 0 10px rgb(135, 18, 126);
   }
+
   4% {
     color: #e8e2e7;
     text-shadow: 0 0 10px rgb(135, 18, 126);
   }
+
   6% {
     color: #2f404d;
     text-shadow: 0 0 10px rgb(135, 18, 126);
   }
+
   100% {
     color: #e8e2e7;
     text-shadow: 0 0 10px rgb(135, 18, 126);
@@ -199,6 +216,7 @@ header {
   flex-direction: column;
   align-items: center;
 }
+
 #sidebar-git-hub {
   background-color: white;
   border-radius: 50%;
@@ -207,6 +225,7 @@ header {
   transition: 0.2s;
   padding: 1px 1px 2px 1px;
 }
+
 #sidebar-linked-in {
   background-color: white;
   border-radius: 50%;
@@ -214,20 +233,24 @@ header {
   transition: 0.2s;
   padding: 1px;
 }
+
 .dark-mode #sidebar-git-hub {
   background-color: #85ebd9;
   border-radius: 50%;
   box-shadow: 0px 0px 10px #e2dddf;
 }
+
 .dark-mode #sidebar-linked-in {
   background-color: #85ebd9;
   border-radius: 50%;
   box-shadow: 0px 0px 10px #e2dddf;
 }
+
 #sidebar-linked-in:hover {
   box-shadow: 0px 0px 20px #e2dddf;
   transform: scale(1.1);
 }
+
 #sidebar-git-hub:hover {
   box-shadow: 0px 0px 20px #e2dddf;
   transform: scale(1.1);
@@ -247,20 +270,25 @@ header {
 #ghi:hover {
   transform: scale(1.1);
 }
+
 .dark-mode #ghi:hover {
   box-shadow: 0px 0px 10px #e2dddf;
 }
+
 #pbi {
   background-color: white;
   border-radius: 40%;
   transition: 0.2s;
 }
+
 #pbi:hover {
   transform: scale(1.1);
 }
+
 .dark-mode #pbi:hover {
   box-shadow: 0px 0px 10px #e2dddf;
 }
+
 .dark-mode #pbi {
   background-color: #85ebd9;
 }
@@ -288,6 +316,7 @@ header {
   box-shadow: 0px 0px 20px #e2dddf;
   transform: scale(1.1);
 }
+
 #git-hub:hover {
   box-shadow: 0px 0px 20px #e2dddf;
   transform: scale(1.1);
@@ -299,14 +328,15 @@ header {
   .sidebar {
     display: none;
   }
+
   .menu-toggle {
     margin: 10px;
     display: flex;
   }
+
   #logo {
-    position: absolute;
     top: 5px;
-    left: 42.5%;
+
     display: flex;
     align-items: center;
     margin: 5px;
@@ -334,6 +364,7 @@ header {
     clip-path: polygon(50% 100%, 0 0, 100% 0);
     background-size: 200% 200%;
   }
+
   .nav-list {
     text-align: center;
     display: none;
@@ -351,6 +382,7 @@ header {
     display: flex;
     background-color: #3d898d;
   }
+
   .dark-mode .nav-list.show {
     background-color: #111122;
   }
@@ -358,15 +390,19 @@ header {
   .nav-list li {
     margin: 10px 0;
   }
+
   .nav-list a {
     color: #e2dddf;
   }
+
   .dark-mode .nav-list a {
     color: #85ebd9;
   }
+
   a:hover {
     color: #15eec2;
   }
+
   .dark-mode .nav-list a:hover {
     color: #e4e3e4;
   }
@@ -387,33 +423,43 @@ header {
     0% {
       background-position: 200% 500%;
     }
+
     10% {
       background-position: 150% 50%;
     }
+
     20% {
       background-position: 100% 500%;
     }
+
     30% {
       background-position: 50% 500%;
     }
+
     40% {
       background-position: 100% 50%;
     }
+
     50% {
       background-position: 150% 500%;
     }
+
     60% {
       background-position: 100% 50%;
     }
+
     70% {
       background-position: 50% 500%;
     }
+
     80% {
       background-position: 100% 50%;
     }
+
     90% {
       background-position: 150% 500%;
     }
+
     100% {
       background-position: 150% 50%;
     }
@@ -434,6 +480,7 @@ header {
     max-width: 550px;
     box-shadow: 5px 2px 14px 2px rgb(102, 91, 120);
   }
+
   .dark-mode #main-card {
     color: #e8e2e7;
     box-shadow: 1px 1px 10px 4px rgb(200, 41, 208);
@@ -444,9 +491,11 @@ header {
     margin-top: 15px;
     font-size: 25px;
   }
+
   .title {
     font-size: 18px;
   }
+
   .short-aboutme {
     padding: 10px 25px;
     font-size: 16px;
@@ -457,6 +506,7 @@ header {
     padding-top: 10px;
     margin: 10px;
   }
+
   .main2-title {
     margin-bottom: 50px;
     text-align: center;
@@ -467,6 +517,7 @@ header {
     text-align: center;
     margin-top: 4.5em;
   }
+
   .dark-mode .main2-title {
     color: #e8e2e7;
     text-shadow: 0 0 10px rgb(135, 18, 126);
@@ -480,6 +531,7 @@ header {
     margin: 15px 10px;
     padding: 20px 30px;
   }
+
   .dark-mode #about-1 {
     color: #e8e2e7;
     text-shadow: 0 0 10px rgb(135, 18, 126);
@@ -497,6 +549,7 @@ header {
     font-weight: 400;
     font-style: normal;
   }
+
   .sec-icons {
     display: flex;
     justify-content: center;
@@ -537,6 +590,7 @@ header {
     box-shadow: 12px 9px 14px 2px rgb(102, 91, 120);
     margin-bottom: 50px;
   }
+
   .dark-mode .project {
     box-shadow: 1px 1px 5px 4px rgb(173, 52, 180);
   }
@@ -553,10 +607,12 @@ header {
     padding: 10px 20px 10px 20px;
     background-color: #e2dddf;
   }
+
   .project .project-info h2 {
     font-size: 20px;
     text-align: center;
   }
+
   .project-description {
     box-shadow: 0px 0px 20px #e2dddf;
     font-size: 1.9vmax;
@@ -577,6 +633,7 @@ header {
     padding: 20px;
     box-shadow: 12px 9px 14px 2px rgb(102, 91, 120);
   }
+
   .dark-mode #contact {
     box-shadow: 1px 1px 5px 4px rgb(173, 52, 180);
   }
@@ -589,10 +646,12 @@ header {
     font-weight: 400;
     font-style: normal;
   }
+
   .dark-mode .contact-header {
     animation: neonlight 4s;
     color: rgb(245, 241, 245);
   }
+
   .contact-p {
     text-align: center;
     font-size: 3vw;
@@ -601,23 +660,29 @@ header {
     font-style: normal;
     padding: 2vw;
   }
+
   .dark-mode .contact-p {
     color: rgb(245, 241, 245);
   }
+
   .elink {
     color: #121212;
     font-weight: bold;
     text-decoration: none;
   }
+
   .elink:hover {
     color: #3d898d;
   }
+
   .dark-mode .elink {
     color: #85ebd9;
   }
+
   .dark-mode .elink:hover {
     color: #df89dd;
   }
+
   /* Styling for the footer section */
 
   #footer {
@@ -629,6 +694,7 @@ header {
     width: 100%;
     background-color: #3d898d;
   }
+
   #footer-icons {
     gap: 20px;
     padding: 10px;
@@ -642,24 +708,35 @@ header {
     font-size: 10px;
   }
 }
+
 /*Responsive design for larger screens*/
 
 @media (min-width: 768px) {
+  .navbar {
+    position: relative;
+  }
   .nav-list a {
     color: #e2dddf;
   }
+
   .nav-list a:hover {
     color: #85ebd9;
     transition-duration: 0.2s;
   }
 
   #logo {
-    position: absolute;
     top: 5px;
-    left: 48.5%;
     display: flex;
     align-items: center;
     border-radius: 50%;
+  }
+  .logo {
+    width: fit-content;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
   }
 
   #main {
@@ -668,6 +745,7 @@ header {
     justify-content: center;
     align-items: center;
   }
+
   #pol {
     margin-top: 60px;
     width: 100%;
@@ -698,33 +776,43 @@ header {
     0% {
       background-position: 200% 500%;
     }
+
     10% {
       background-position: 150% 50%;
     }
+
     20% {
       background-position: 100% 500%;
     }
+
     30% {
       background-position: 50% 500%;
     }
+
     40% {
       background-position: 100% 50%;
     }
+
     50% {
       background-position: 150% 500%;
     }
+
     60% {
       background-position: 100% 50%;
     }
+
     70% {
       background-position: 50% 500%;
     }
+
     80% {
       background-position: 100% 50%;
     }
+
     90% {
       background-position: 150% 500%;
     }
+
     100% {
       background-position: 150% 50%;
     }
@@ -747,6 +835,7 @@ header {
     max-width: 550px;
     box-shadow: 8px 6px 14px 2px rgb(102, 91, 120);
   }
+
   .dark-mode #main-card {
     color: #e8e2e7;
     text-shadow: 0 0 10px rgb(135, 18, 126);
@@ -780,6 +869,7 @@ header {
     font-weight: 400;
     font-style: normal;
   }
+
   .dark-mode .main2-title {
     color: #e8e2e7;
     text-shadow: 0 0 10px rgb(135, 18, 126);
@@ -803,6 +893,7 @@ header {
     padding: 20px 30px;
     border-radius: 6px;
   }
+
   .dark-mode #about-1 {
     color: #e8e2e7;
     text-shadow: 0 0 10px rgb(135, 18, 126);
@@ -814,6 +905,7 @@ header {
   #projects {
     padding-bottom: 20px;
   }
+
   .proh2 {
     color: #121212;
     font-family: "Amethysta", serif;
@@ -825,6 +917,7 @@ header {
     margin-bottom: 3rem;
     padding-top: 100px;
   }
+
   /* Darkmode for project section header */
   .dark-mode .proh2 {
     color: #e2e2e8;
@@ -850,8 +943,10 @@ header {
     box-shadow: 12px 9px 14px 2px rgb(102, 91, 120);
     width: 28%;
     position: relative;
-    overflow: hidden; /* added overflow property to contain the absolute positioned info */
+    overflow: hidden;
+    /* added overflow property to contain the absolute positioned info */
   }
+
   .dark-mode .project {
     color: #e8e2e7;
     box-shadow: 1px 1px 5px 4px rgb(173, 52, 180);
@@ -870,6 +965,7 @@ header {
     padding: 5px 20px;
     color: #e8e2e7;
   }
+
   .sec-icons {
     gap: 60px;
     display: flex;
@@ -879,10 +975,12 @@ header {
     right: 20%;
     left: 20%;
   }
+
   #ghi {
     height: 2.5vw;
     width: 2.5vw;
   }
+
   #pbi {
     height: 2.5vw;
     width: 2.5vw;
@@ -896,9 +994,11 @@ header {
     bottom: 1;
     /* text-align: center; */
     opacity: 1;
-    transform: translatey(85%); /* initially move the info off-screen */
+    transform: translatey(85%);
+    /* initially move the info off-screen */
     transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
   }
+
   .project .project-info h2 {
     margin-bottom: 1vmax;
     padding-top: 1vw;
@@ -922,7 +1022,8 @@ header {
     cursor: pointer;
     opacity: 1;
     background-color: #3d898d;
-    transform: translateX(0); /* move the info back on-screen */
+    transform: translateX(0);
+    /* move the info back on-screen */
   }
 
   .dark-mode .project:hover .project-info {
@@ -944,6 +1045,7 @@ header {
     border-radius: 15px;
     box-shadow: 12px 9px 14px 2px rgb(102, 91, 120);
   }
+
   .dark-mode #contact {
     box-shadow: 1px 1px 10px 4px rgb(200, 41, 208);
   }
@@ -956,10 +1058,12 @@ header {
     font-weight: 400;
     font-style: normal;
   }
+
   .dark-mode .contact-header {
     animation: neonlight 4s;
     color: rgb(245, 241, 245);
   }
+
   .contact-p {
     text-align: center;
     font-size: 20px;
@@ -968,24 +1072,30 @@ header {
     font-style: normal;
     padding: 40px 10px;
   }
+
   .dark-mode .contact-p {
     color: rgb(245, 241, 245);
   }
+
   .elink {
     color: #121212;
     font-weight: bold;
     text-decoration: none;
   }
+
   .dark-mode .elink {
     color: #85ebd9;
   }
+
   .dark-mode .elink:hover {
     color: #df89dd;
   }
+
   .elink:hover {
     cursor: pointer;
     color: #3d898d;
   }
+
   #footer {
     display: flex;
     align-items: center;
@@ -994,6 +1104,7 @@ header {
     height: 100px;
     background-color: #3d898d;
   }
+
   #footer-icons {
     display: none;
   }

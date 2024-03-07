@@ -1,196 +1,219 @@
 <!DOCTYPE html>
 <html lang="no">
-  <head>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Amethysta&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
-  </head>
-  <body>
-   
-    <header>
-      
-      <button class="darkmode" onclick="Darkmode()" id="modeSwitcher">💡</button>
- <a href="#main"><img id="logo" src="images/p-logo.jpg"  alt="logo-icon"width="40" height="40"></a>
 
-          <!-- Navbar meny -->
-         <nav class="navbar">
-            <div class="menu-toggle" id="mobile-menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            
-            <ul class="nav-list"> 
-            <li> <a href="#main2">Om meg</a></li>
-            <li> <a href="#projects">Mine prosjekter</a></li>
-            <li> <a href="#contact">Kontakt meg</a></li>
-            </ul>
-          </nav>
-         
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amethysta&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+</head>
+
+<body>
+
+  <header>
+
+
+
+    <!-- Navbar meny -->
+    <nav class="navbar">
+      <div class="">
+        <button class="darkmode" onclick="Darkmode()" id="modeSwitcher">💡</button>
+      </div>
+      <a class="logo" href="#main"><img id="logo" src="images/p-logo.jpg" alt="logo-icon" width="40" height="40"></a>
+
+      <div class="menu-toggle" id="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <ul class="nav-list">
+        <li> <a href="#main2">Om meg</a></li>
+        <li> <a href="#projects">Mine prosjekter</a></li>
+        <li> <a href="#contact">Kontakt meg</a></li>
+      </ul>
+    </nav>
+
+    </div>
+
+  </header>
+
+  <!-- Main section -->
+  <section id="main">
+    <div id="pol"></div>
+    <div id="portrait">
+      <img id="avatar" src="images/Randomport.jpg" alt=""></img>
+    </div>
+    <div id="main-card">
+      <h2 class="name">Stein</h2>
+      <h2 class="title">&lt;Junior frontend utvikler&#8725;&gt</h2>
+      <h3 class="short-aboutme">En fremtidig og entusiastisk Frontend-utvikler med et ønske om å lage fantastiske
+        nett-opplevelser ved hjelp av mine kunnskaper innen Frontend utvikling.</h3>
+    </div>
+    </div>
+  </section>
+
+
+  <!-- About section -->
+
+  <section id="main2">
+
+    <h2 class="main2-title">Litt om meg</h2>
+
+
+    <div id="aboutme">
+      <div id="about-1">
+        <p>Hei, mitt navn er Stein og jeg er en framtidig og entusiastisk frontend utvikler med en stor lidenskap og
+          interesse for faget.
+          Drivkraften min er å lage gode nett-opplevelser med godt design og brukervennlige funksjoner , lære nye ting
+          på veien og se kodingen min komme til virkelighet.<br>
+          <br>Javascript er veldig spennende, men det er CSS som er favoritten!<br>
+          For meg er det viktig med et godt responsivt design og brukeropplevelse, både visuelt og interaktivt. For
+          tiden fordyper jeg meg i Next.JS, Tailwind, Typescript og APIs.<br>
+          <br>Utenom koding, kobler jeg av med
+          gaming, brygging av øl og cider, fisking og Tee-off på golfbanen!
+        </p>
+      </div>
+    </div>
+
+  </section>
+  <!-- Project section -->
+
+  <section id="projects">
+    <h2 class="proh2">Noen av mine prosjekter</h2>
+    <div class="flex-1">
+      <div class="project">
+        <img class="prosjekt-img" src="images/LLapp.png" alt="Project image">
+        <div class="project-info">
+          <h2>Luna Link</h2>
+          <p class="project-description">Et lærerikt gruppeprosjekt jeg var prosjektleder for. Prosjektet var gøyt å
+            jobbe med og ga god trening i forhold til samarbeid, koding og å være prosjektleder.<br>
+            <br>Verktøy: HTML, CSS, Javascript, React.
+          </p>
+          <div class="sec-icons">
+            <p><a href="#" target="_blank">
+                <img id="ghi" src="images/githubfooter.svg" alt="Github-icon" width="40" height="40">
+              </a></p>
+            <p><a href="#" target="_blank">
+                <img id="pbi" src="images/play2.svg" alt="Play-button" width="40" height="40">
+              </a></p>
           </div>
-      </header>  
-      
-       <!-- Main section -->
-        <section id="main">
-              <div id="pol"></div>
-                <div id="portrait"> 
-                  <img id="avatar" src="images/Randomport.jpg" alt=""></img>
-                  </div>
-                  <div id="main-card"> 
-                    <h2 class="name">Stein</h2>
-                    <h2 class="title">&lt;Junior frontend utvikler&#8725;&gt</h2>
-                    <h3 class="short-aboutme">En fremtidig og entusiastisk Frontend-utvikler med et ønske om å lage fantastiske nett-opplevelser ved hjelp av mine kunnskaper innen Frontend utvikling.</h3>
-                  </div>
-              </div>
-        </section>
-
-
-        <!-- About section -->
-        
-<section id="main2"> 
-  
-      <h2 class="main2-title">Litt om meg</h2>
-        
-            
-            <div id="aboutme"> 
-                <div id="about-1">
-                  <p>Hei, mitt navn er Stein og jeg er en framtidig og entusiastisk frontend utvikler med en stor lidenskap og interesse for faget. 
-                  Drivkraften min er å lage gode nett-opplevelser med godt design og brukervennlige funksjoner , lære nye ting på veien og se kodingen min komme til virkelighet.<br> 
-                  <br>Javascript er veldig spennende, men det er CSS som er favoritten!<br>
-                  For meg er det viktig med et godt responsivt design og brukeropplevelse, både visuelt og interaktivt.  For tiden fordyper jeg meg i Next.JS, Tailwind, Typescript og APIs.<br>
-                  <br>Utenom koding, kobler jeg av med
-                  gaming, brygging av øl og cider, fisking og Tee-off på golfbanen!
-                  </p>
-                </div>
-            </div>
-
-</section>
-        <!-- Project section -->
-        
-      <section id="projects">
-        <h2 class="proh2">Noen av mine prosjekter</h2>
-                <div class="flex-1"> 
-                    <div class="project">
-                        <img class="prosjekt-img" src="images/LLapp.png" alt="Project image">
-                      <div class="project-info">
-                        <h2>Luna Link</h2>
-                            <p class="project-description">Et lærerikt gruppeprosjekt jeg var prosjektleder for. Prosjektet var gøyt å jobbe med og ga god trening i forhold til samarbeid, koding og å være prosjektleder.<br>
-                            <br>Verktøy: HTML, CSS, Javascript, React.</p>
-                           <div class="sec-icons"> 
-                              <p><a href="#" target="_blank">
-                                  <img id="ghi" src="images/githubfooter.svg"  alt="Github-icon"width="40" height="40">
-                                  </a></p>
-                                <p><a href="#" target="_blank">
-                                <img id="pbi" src="images/play2.svg" alt="Play-button" width="40" height="40">
-                                </a></p>
-                          </div>
-                     </div>
-                    </div>
-
-                    <div class="project">
-                      <img class="prosjekt-img" src="images/GCapp.png" alt="Project">
-                      <div class="project-info">
-                        <h2>Golfshot Counter</h2>
-                       <p class="project-description">Et enkelt, men gøyt prosjekt jeg designet som kan brukes på golfbanen for å holde kontroll på antall golfslag i løpet av golfrunden.<br> Test den på golfbanen og si hva du synes.
-                        <br><br>Verktøy: HTML, CSS, Javascript.</p>
-                       <div class="sec-icons"> 
-                           <p><a href="https://github.com/Stein-B06/Golfshot-counter" target="_blank">
-                                  <img id="ghi" src="images/githubfooter.svg"  alt="Github-icon"width="40" height="40">
-                                  </a></p>
-                                <p><a href="https://stein-b06.github.io/Golfshot-counter/" target="_blank">
-                                <img id="pbi" src="images/play2.svg" alt="Play-button" width="40" height="40">
-                                </a></p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                
-                  <div class="flex-2">
-                    <div class="project">
-                    <img class="prosjekt-img" src="images/HHapp.png" alt="Project">
-                    <div class="project-info">
-                      <h2>Homemade Happiness</h2>
-                       <p class="project-description">En bloggside jeg lagde ved hjelp av Typescript og React.<br> Dette var mitt aller første prosjekt i React og temaet for bloggsiden er en av hobbyene mine.  Prosjektet er også noe som jeg kommer til å jobbe videre med i framtiden.
-                        <br><br>Verktøy: HTML, CSS, React, Typescript.</p>
-                        <div class="sec-icons"> 
-                          <p><a href="https://github.com/Stein-B06/reacttask20" target="_blank">
-                                  <img id="ghi" src="images/githubfooter.svg"  alt="Github-icon"width="40" height="40">
-                                  </a></p>
-                          
-                                <p><a href="https://bejewelled-centaur-e1e144.netlify.app/" target="_blank">
-                                <img id="pbi" src="images/play2.svg" alt="Play-button" width="40" height="40">
-                                </a></p>
-                        </div>
-                      </div>
-                    </div>
-                
-                    <div class="project">
-                      <img class="prosjekt-img" src="images/wlapp.png" alt="Project">
-                      <div class="project-info">
-                        <h2>Workout log</h2>
-                         <p class="project-description">Workout log er en treningslogg som jeg var med å lage i forbindelse med et gruppeprosjekt.<br><br> Med gode kunnskaper og godt samarbeid lagde vi en treningslogg som kan hjelpe deg og gi en god oversikt over uke-treningen din.
-                        <br><br>Verktøy: HTML, CSS, Javascript.</p>
-                         <div class="sec-icons"> 
-                        
-                                  <p><a href="#" target="_blank">
-                                  <img id="ghi" src="images/githubfooter.svg"  alt="Github-icon"width="40" height="40">
-                                  </a></p>
-                          
-                             
-                                <p><a href="#" target="_blank">
-                                <img id="pbi" src="images/play2.svg" alt="Play-button" width="40" height="40">
-                                </a></p>
-                          
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-      </section>
-
-
-      <!-- Sidebar section -->
-      
-  <div class="sidebar">
-      <p><a href="https://github.com/Stein-B06" target="_blank">
-                            <img id="sidebar-git-hub" src="images/githubfooter.svg" alt="Github-icon" width="40" height="40">
-                            </a></p>
-      <p><a href="#" target="_blank">
-                            <img id="sidebar-linked-in" src="images/linkedin.svg" alt="Github-icon" width="40" height="40">
-                            </a></p>
-  </div>
-
-
-      <!-- Contact section -->
-      
-      <section id="contact">
-        <h2 class="contact-header">Kontakt meg</h2>
-              <p class="contact-p">Om du ønsker å ta kontakt med meg, send meg gjerne en epost<br> <a class="elink" href="mailto:">stein.jfu@gmail.com</a></p>
-     
-              
-              
-      </section>
-      
-      <footer id="footer">
-        <div id="footer-icons"> 
-            <p><a href="https://github.com/Stein-B06" target="_blank">
-                            <img id="git-hub" src="images/githubfooter.svg" alt="Github-icon" width="40" height="40">
-                            </a></p>
-
-                            <p><a href="#" target="_blank">
-                            <img id="linked-in" src="images/linkedin.svg" alt="Github-icon" width="40" height="40">
-                            </a></p>
         </div>
-        <div id="copyright">Copyright 2024</div> 
-      </footer>
-     
-      <script src="index.js"></script>
+      </div>
+
+      <div class="project">
+        <img class="prosjekt-img" src="images/GCapp.png" alt="Project">
+        <div class="project-info">
+          <h2>Golfshot Counter</h2>
+          <p class="project-description">Et enkelt, men gøyt prosjekt jeg designet som kan brukes på golfbanen for å
+            holde kontroll på antall golfslag i løpet av golfrunden.<br> Test den på golfbanen og si hva du synes.
+            <br><br>Verktøy: HTML, CSS, Javascript.
+          </p>
+          <div class="sec-icons">
+            <p><a href="https://github.com/Stein-B06/Golfshot-counter" target="_blank">
+                <img id="ghi" src="images/githubfooter.svg" alt="Github-icon" width="40" height="40">
+              </a></p>
+            <p><a href="https://stein-b06.github.io/Golfshot-counter/" target="_blank">
+                <img id="pbi" src="images/play2.svg" alt="Play-button" width="40" height="40">
+              </a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex-2">
+      <div class="project">
+        <img class="prosjekt-img" src="images/HHapp.png" alt="Project">
+        <div class="project-info">
+          <h2>Homemade Happiness</h2>
+          <p class="project-description">En bloggside jeg lagde ved hjelp av Typescript og React.<br> Dette var mitt
+            aller første prosjekt i React og temaet for bloggsiden er en av hobbyene mine. Prosjektet er også noe som
+            jeg kommer til å jobbe videre med i framtiden.
+            <br><br>Verktøy: HTML, CSS, React, Typescript.
+          </p>
+          <div class="sec-icons">
+            <p><a href="https://github.com/Stein-B06/reacttask20" target="_blank">
+                <img id="ghi" src="images/githubfooter.svg" alt="Github-icon" width="40" height="40">
+              </a></p>
+
+            <p><a href="https://bejewelled-centaur-e1e144.netlify.app/" target="_blank">
+                <img id="pbi" src="images/play2.svg" alt="Play-button" width="40" height="40">
+              </a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="project">
+        <img class="prosjekt-img" src="images/wlapp.png" alt="Project">
+        <div class="project-info">
+          <h2>Workout log</h2>
+          <p class="project-description">Workout log er en treningslogg som jeg var med å lage i forbindelse med et
+            gruppeprosjekt.<br><br> Med gode kunnskaper og godt samarbeid lagde vi en treningslogg som kan hjelpe deg og
+            gi en god oversikt over uke-treningen din.
+            <br><br>Verktøy: HTML, CSS, Javascript.
+          </p>
+          <div class="sec-icons">
+
+            <p><a href="#" target="_blank">
+                <img id="ghi" src="images/githubfooter.svg" alt="Github-icon" width="40" height="40">
+              </a></p>
+
+
+            <p><a href="#" target="_blank">
+                <img id="pbi" src="images/play2.svg" alt="Play-button" width="40" height="40">
+              </a></p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Sidebar section -->
+
+  <div class="sidebar">
+    <p><a href="https://github.com/Stein-B06" target="_blank">
+        <img id="sidebar-git-hub" src="images/githubfooter.svg" alt="Github-icon" width="40" height="40">
+      </a></p>
+    <p><a href="#" target="_blank">
+        <img id="sidebar-linked-in" src="images/linkedin.svg" alt="Github-icon" width="40" height="40">
+      </a></p>
   </div>
-    </body>
+
+
+  <!-- Contact section -->
+
+  <section id="contact">
+    <h2 class="contact-header">Kontakt meg</h2>
+    <p class="contact-p">Om du ønsker å ta kontakt med meg, send meg gjerne en epost<br> <a class="elink"
+        href="mailto:">stein.jfu@gmail.com</a></p>
+
+
+
+  </section>
+
+  <footer id="footer">
+    <div id="footer-icons">
+      <p><a href="https://github.com/Stein-B06" target="_blank">
+          <img id="git-hub" src="images/githubfooter.svg" alt="Github-icon" width="40" height="40">
+        </a></p>
+
+      <p><a href="#" target="_blank">
+          <img id="linked-in" src="images/linkedin.svg" alt="Github-icon" width="40" height="40">
+        </a></p>
+    </div>
+    <div id="copyright">Copyright 2024</div>
+  </footer>
+
+  <script src="index.js"></script>
+  </div>
+</body>
+
 </html>
