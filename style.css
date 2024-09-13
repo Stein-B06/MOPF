@@ -20,7 +20,7 @@ header {
   top: 0;
   /* So header is on top of page */
   width: 100%;
-  height: 60px;
+  height: 61px;
   background-color: #3d898d;
   display: flex;
   align-items: center;
@@ -121,9 +121,9 @@ header {
 
 .menu-toggle span {
   height: 3px;
-  width: 30px;
+  width: 25px;
   background-color: #e2dddf;
-  margin: 3.5px 0;
+  margin: 2.5px 0;
   transition: 0.3s;
 }
 
@@ -133,7 +133,7 @@ header {
 
 /*Styling for the "X" appearance */
 .menu-toggle span.change:nth-child(1) {
-  transform: rotate(-45deg) translate(-6.5px, 4.5px);
+  transform: rotate(-45deg) translate(-4.5px, 4.5px);
 }
 
 .menu-toggle span.change:nth-child(2) {
@@ -141,7 +141,7 @@ header {
 }
 
 .menu-toggle span.change:nth-child(3) {
-  transform: rotate(45deg) translate(-9.5px, -7.5px);
+  transform: rotate(45deg) translate(-6.5px, -6.5px);
 }
 
 /*Colors for the dark & light animation*/
@@ -226,29 +226,10 @@ header {
   padding: 1px 1px 2px 1px;
 }
 
-#sidebar-linked-in {
-  background-color: white;
-  border-radius: 50%;
-  box-shadow: 0px 0px 10px #e2dddf;
-  transition: 0.2s;
-  padding: 1px;
-}
-
 .dark-mode #sidebar-git-hub {
   background-color: #85ebd9;
   border-radius: 50%;
   box-shadow: 0px 0px 10px #e2dddf;
-}
-
-.dark-mode #sidebar-linked-in {
-  background-color: #85ebd9;
-  border-radius: 50%;
-  box-shadow: 0px 0px 10px #e2dddf;
-}
-
-#sidebar-linked-in:hover {
-  box-shadow: 0px 0px 20px #e2dddf;
-  transform: scale(1.1);
 }
 
 #sidebar-git-hub:hover {
@@ -303,20 +284,6 @@ header {
   padding: 1px 1px 2px 1px;
 }
 
-#linked-in {
-  width: 30px;
-  height: 30px;
-  background-color: white;
-  border-radius: 50%;
-  transition: 0.2s;
-  padding: 1px;
-}
-
-#linked-in:hover {
-  box-shadow: 0px 0px 20px #e2dddf;
-  transform: scale(1.1);
-}
-
 #git-hub:hover {
   box-shadow: 0px 0px 20px #e2dddf;
   transform: scale(1.1);
@@ -336,7 +303,6 @@ header {
 
   #logo {
     top: 5px;
-
     display: flex;
     align-items: center;
     margin: 5px;
@@ -366,24 +332,29 @@ header {
   }
 
   .nav-list {
-    text-align: center;
-    display: none;
-    flex-direction: column;
-    width: 100%;
     position: absolute;
     top: 50px;
-    left: 0;
-    padding: 20px;
-    box-sizing: border-box;
-    margin-top: 10px;
+    right: 0;
+    background-color: #3d898d;
+    width: 100%;
+    overflow: hidden;
+    max-height: 0; /* Initially hidden */
+    opacity: 0; /* Invisible initially */
+    visibility: hidden; /* Fully hidden initially */
+    transition: max-height 0.8s ease, opacity 0.8s ease, visibility 0.8s;
+    display: flex; /* Ensure it takes up space for max-height transition */
+    text-align: center;
+    flex-direction: column;
   }
 
   .nav-list.show {
-    display: flex;
-    background-color: #3d898d;
+    max-height: 300px;
+    opacity: 1;
+    visibility: visible;
+    transition: max-height 1s ease, opacity 1s ease, visibility 0s;
   }
 
-  .dark-mode .nav-list.show {
+  .dark-mode .nav-list {
     background-color: #111122;
   }
 
